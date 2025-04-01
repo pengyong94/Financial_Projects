@@ -1,0 +1,692 @@
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+Traceback (most recent call last):
+  File "/data/AI_Projects/Financial_Agent/src/main.py", line 17, in <module>
+    fileprocessor = FileProcessor()
+  File "/data/AI_Projects/Financial_Agent/src/file_process.py", line 20, in __init__
+    self._load_config()
+  File "/data/AI_Projects/Financial_Agent/src/file_process.py", line 30, in _load_config
+    self.key_id = os.getenv('KEY_ID', self.config.get('TEXT_IN', 'key_id'))
+  File "/usr/local/lib/python3.10/configparser.py", line 782, in get
+    d = self._unify_values(section, vars)
+  File "/usr/local/lib/python3.10/configparser.py", line 1153, in _unify_values
+    raise NoSectionError(section) from None
+configparser.NoSectionError: No section: 'TEXT_IN'
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+Traceback (most recent call last):
+  File "/data/AI_Projects/Financial_Agent/./src/main.py", line 17, in <module>
+    fileprocessor = FileProcessor()
+  File "/data/AI_Projects/Financial_Agent/src/file_process.py", line 20, in __init__
+    self._load_config()
+  File "/data/AI_Projects/Financial_Agent/src/file_process.py", line 30, in _load_config
+    self.key_id = os.getenv('KEY_ID', self.config.get('TEXT_IN', 'key_id'))
+  File "/usr/local/lib/python3.10/configparser.py", line 782, in get
+    d = self._unify_values(section, vars)
+  File "/usr/local/lib/python3.10/configparser.py", line 1153, in _unify_values
+    raise NoSectionError(section) from None
+configparser.NoSectionError: No section: 'TEXT_IN'
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1620]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1620]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+Traceback (most recent call last):
+  File "/data/AI_Projects/Financial_Agent/src/main.py", line 19, in <module>
+    extractor = ExtractHelper()
+  File "/data/AI_Projects/Financial_Agent/src/extract_hepler.py", line 32, in __init__
+    self.extract_items_prompt, self.fields = self._get_extract_items_prompt()
+  File "/data/AI_Projects/Financial_Agent/src/extract_hepler.py", line 37, in _get_extract_items_prompt
+    raise FileNotFoundError(f"File not found: {self.field_path}")
+FileNotFoundError: File not found: "config/core_fields_explain.json"
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+Traceback (most recent call last):
+  File "/data/AI_Projects/Financial_Agent/src/main.py", line 19, in <module>
+    extractor = ExtractHelper()
+  File "/data/AI_Projects/Financial_Agent/src/extract_hepler.py", line 32, in __init__
+    self.extract_items_prompt, self.fields = self._get_extract_items_prompt()
+  File "/data/AI_Projects/Financial_Agent/src/extract_hepler.py", line 37, in _get_extract_items_prompt
+    raise FileNotFoundError(f"File not found: {self.field_path}")
+FileNotFoundError: File not found: "config/core_fields_explain.json"
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+Traceback (most recent call last):
+  File "/data/AI_Projects/Financial_Agent/src/main.py", line 19, in <module>
+    extractor = ExtractHelper()
+  File "/data/AI_Projects/Financial_Agent/src/extract_hepler.py", line 34, in __init__
+    self.extract_items_prompt, self.fields = self._get_extract_items_prompt()
+  File "/data/AI_Projects/Financial_Agent/src/extract_hepler.py", line 39, in _get_extract_items_prompt
+    raise FileNotFoundError(f"File not found: {self.field_path}")
+FileNotFoundError: File not found: "config/core_fields_explain.json"
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+/data/AI_Projects/Financial_Agent
+Traceback (most recent call last):
+  File "/data/AI_Projects/Financial_Agent/src/main.py", line 19, in <module>
+    extractor = ExtractHelper()
+  File "/data/AI_Projects/Financial_Agent/src/extract_hepler.py", line 34, in __init__
+    self.extract_items_prompt, self.fields = self._get_extract_items_prompt()
+  File "/data/AI_Projects/Financial_Agent/src/extract_hepler.py", line 39, in _get_extract_items_prompt
+    raise FileNotFoundError(f"File not found: {self.field_path}")
+FileNotFoundError: File not found: "config/core_fields_explain.json"
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1685]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Agent/src/main.py:86: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  result = fileprocessor.process_asset(request.dict())
+INFO:     121.199.20.25:33406 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     121.199.20.25:53238 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1685]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+Traceback (most recent call last):
+  File "/data/AI_Projects/Financial_Agent/src/main.py", line 13, in <module>
+    from file_process import FileProcessor
+  File "/data/AI_Projects/Financial_Agent/src/file_process.py", line 10, in <module>
+    from utils.file2md import TextinOcr
+  File "/data/AI_Projects/Financial_Agent/utils/__init__.py", line 4, in <module>
+    from utils.api import *
+  File "/data/AI_Projects/Financial_Agent/utils/api.py", line 18, in <module>
+    silicon_model = os.getenv('chat_model', config.get('SiliconCloud', 'chat_model'))
+  File "/usr/local/lib/python3.10/configparser.py", line 782, in get
+    d = self._unify_values(section, vars)
+  File "/usr/local/lib/python3.10/configparser.py", line 1153, in _unify_values
+    raise NoSectionError(section) from None
+configparser.NoSectionError: No section: 'SiliconCloud'
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+Traceback (most recent call last):
+  File "/data/AI_Projects/Financial_Agent/src/main.py", line 13, in <module>
+    from file_process import FileProcessor
+  File "/data/AI_Projects/Financial_Agent/src/file_process.py", line 10, in <module>
+    from utils.file2md import TextinOcr
+  File "/data/AI_Projects/Financial_Agent/utils/__init__.py", line 4, in <module>
+    from utils.api import *
+  File "/data/AI_Projects/Financial_Agent/utils/api.py", line 18, in <module>
+    silicon_model = os.getenv('chat_model', config.get('SiliconCloud', 'chat_model'))
+  File "/usr/local/lib/python3.10/configparser.py", line 782, in get
+    d = self._unify_values(section, vars)
+  File "/usr/local/lib/python3.10/configparser.py", line 1153, in _unify_values
+    raise NoSectionError(section) from None
+configparser.NoSectionError: No section: 'SiliconCloud'
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1722]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1722]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+Traceback (most recent call last):
+  File "/data/AI_Projects/Financial_Agent/src/main.py", line 13, in <module>
+    from file_process import FileProcessor
+  File "/data/AI_Projects/Financial_Agent/src/file_process.py", line 10, in <module>
+    from utils.file2md import TextinOcr
+  File "/data/AI_Projects/Financial_Agent/utils/file2md.py", line 12, in <module>
+    OSS_ACCESS_KEY_ID = os.getenv('OSS_ACCESS_KEY_ID', config.get('OSS', 'ACCESS_KEY_ID'))
+  File "/usr/local/lib/python3.10/configparser.py", line 782, in get
+    d = self._unify_values(section, vars)
+  File "/usr/local/lib/python3.10/configparser.py", line 1153, in _unify_values
+    raise NoSectionError(section) from None
+configparser.NoSectionError: No section: 'OSS'
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1748]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1748]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1762]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     205.210.31.200:57564 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.130:61942 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     59.82.21.42:49167 - "GET / HTTP/1.1" 404 Not Found
+INFO:     59.82.21.17:38121 - "GET / HTTP/1.1" 404 Not Found
+INFO:     39.99.142.2:57782 - "GET / HTTP/1.0" 404 Not Found
+INFO:     39.99.142.2:57788 - "GET / HTTP/1.1" 404 Not Found
+INFO:     39.99.142.2:57792 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     125.122.33.97:49134 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.85.109:36504 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.86.84:47638 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.86.38:50580 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.86.159:47244 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.33.107:59300 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.70.189:37672 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.224:46564 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.81.152:39652 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.85:47676 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.60:58452 - "GET / HTTP/1.1" 404 Not Found
+INFO:     39.99.156.214:33026 - "GET / HTTP/1.0" 404 Not Found
+INFO:     39.99.156.214:33028 - "GET / HTTP/1.1" 404 Not Found
+INFO:     39.99.156.214:33034 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     125.122.12.192:57012 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.85.112:40372 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.84.149:58876 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.14.17:48400 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.228:36010 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.84.90:38878 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.92.57:58856 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.71.187:39906 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.82.177:45356 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.86.67:33996 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.85.139:55194 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.12.205:57614 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.84:48226 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.84:48336 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.33.88:34090 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.71.134:53208 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.85.175:43262 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.86.67:34694 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.86.67:34726 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.70.185:49264 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.56:55744 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.83.185:58898 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.68.49:38666 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.64.166:46298 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.33.107:32968 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.87.161:59410 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.69.28:43266 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.67.236:53452 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.65.209:37972 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.86.249:48270 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.83.185:59346 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.65.209:38136 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.33.93:36284 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.33.103:44898 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.67.236:54264 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.82.0:55000 - "GET / HTTP/1.1" 404 Not Found
+INFO:      - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.93.250:42484 - "GET / HTTP/1.1" 404 Not Found
+INFO:      - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.83:34048 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.87:56008 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.86.22:59040 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.69.170:49570 - "GET / HTTP/1.1" 404 Not Found
+INFO:      - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.32.66:43092 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.83:34564 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.84.27:50730 - "GET / HTTP/1.1" 404 Not Found
+INFO:      - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.30:45534 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.86.249:51270 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.69.156:53776 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.33.103:47782 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.64.20:56220 - "GET / HTTP/1.1" 404 Not Found
+INFO:     39.99.133.4:60602 - "GET / HTTP/1.0" 404 Not Found
+INFO:     39.99.133.4:60618 - "GET / HTTP/1.1" 404 Not Found
+INFO:     39.99.133.4:60642 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     125.122.33.103:48742 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.69.15:34482 - "GET / HTTP/1.1" 404 Not Found
+INFO:     39.99.156.198:48784 - "GET / HTTP/1.0" 404 Not Found
+INFO:     39.99.156.198:48804 - "GET / HTTP/1.1" 404 Not Found
+INFO:     39.99.156.198:48814 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     39.99.156.73:59986 - "GET / HTTP/1.0" 404 Not Found
+INFO:     39.99.156.73:60008 - "GET / HTTP/1.1" 404 Not Found
+INFO:     39.99.156.73:60032 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     39.99.153.203:53500 - "GET / HTTP/1.0" 404 Not Found
+INFO:     39.99.153.203:53510 - "GET / HTTP/1.1" 404 Not Found
+INFO:     39.99.153.203:53518 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     101.251.238.60:52123 - "GET / HTTP/1.1" 404 Not Found
+INFO:     101.251.238.60:52123 - "GET / HTTP/1.1" 404 Not Found
+INFO:     101.251.238.60:52123 - "GET / HTTP/1.1" 404 Not Found
+INFO:     101.251.238.60:52123 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     101.251.238.60:52123 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     47.236.251.77:34380 - "GET http%3A//passport.baidu.com/ HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     118.123.1.33:56886 - "GET / HTTP/1.1" 404 Not Found
+INFO:     118.123.1.33:56888 - "GET /public/stylesheets/theme.css HTTP/1.1" 404 Not Found
+INFO:     118.123.1.33:56890 - "GET /stylesheets/theme.css HTTP/1.1" 404 Not Found
+INFO:     118.123.1.33:56892 - "GET /chs/js/lang_zh_tw.js HTTP/1.1" 404 Not Found
+INFO:     118.123.1.33:56896 - "GET /index.php HTTP/1.1" 404 Not Found
+INFO:     118.123.1.33:56894 - "GET /customer/js/lang_zh_tw.js HTTP/1.1" 404 Not Found
+INFO:     118.123.1.33:56898 - "GET /login/stylesheets/theme.css HTTP/1.1" 404 Not Found
+INFO:     118.123.1.33:56900 - "GET /index.php HTTP/1.1" 404 Not Found
+INFO:     118.123.1.33:56910 - "GET /ips/index.php HTTP/1.1" 404 Not Found
+INFO:     147.185.132.192:60900 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     172.212.103.89:54842 - "GET /setup/eureka_info HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     205.210.31.6:57566 - "GET / HTTP/1.1" 404 Not Found
+INFO:     47.94.224.232:33144 - "GET /login HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     1.71.140.154:36162 - "GET / HTTP/1.1" 404 Not Found
+INFO:     1.71.140.154:36548 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     45.43.62.77:35294 - "GET / HTTP/1.1" 404 Not Found
+INFO:     45.43.62.77:47300 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     45.43.62.77:47308 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     45.43.62.77:47316 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     185.242.226.24:55396 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     51.81.215.76:45635 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     195.184.76.111:59667 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     91.196.152.93:55299 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     91.196.152.114:35041 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     91.196.152.95:59303 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     91.196.152.33:49579 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     161.189.90.122:36728 - "GET /api/v0/models HTTP/1.1" 404 Not Found
+INFO:     161.189.90.122:36822 - "GET /v1/models HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.146.57:39822 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.146.57:35780 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.146.57:35798 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.146.57:41252 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     39.103.165.234:54100 - "GET / HTTP/1.0" 404 Not Found
+INFO:     39.103.165.234:57092 - "GET /nice%20ports%2C/Trinity.txt.bak HTTP/1.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     39.103.165.234:34740 - "OPTIONS / HTTP/1.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     39.103.165.234:40890 - "POST /sdk HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     39.103.165.234:44548 - "GET /nmaplowercheck1742818628 HTTP/1.1" 404 Not Found
+INFO:     39.103.165.234:44632 - "GET /HNAP1 HTTP/1.1" 404 Not Found
+INFO:     39.103.165.234:45296 - "GET /evox/about HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     39.103.165.234:56510 - "GET / HTTP/1.1" 404 Not Found
+INFO:     148.153.45.238:55088 - "GET /nSd7 HTTP/1.1" 404 Not Found
+INFO:     148.153.45.238:55092 - "GET /3Qet HTTP/1.1" 404 Not Found
+INFO:     148.153.45.238:55096 - "GET /aab8 HTTP/1.1" 404 Not Found
+INFO:     148.153.45.238:55112 - "GET /jquery-3.3.1.slim.min.js HTTP/1.1" 404 Not Found
+INFO:     148.153.45.238:55114 - "GET /aab9 HTTP/1.1" 404 Not Found
+INFO:     148.153.45.238:55122 - "GET /jquery-3.3.2.slim.min.js HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     91.183.57.64:56571 - "GET / HTTP/1.1" 404 Not Found
+INFO:     68.237.83.139:56365 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     195.178.110.224:33406 - "GET / HTTP/1.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Unsupported upgrade request.
+WARNING:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+INFO:     39.103.166.74:59292 - "GET / HTTP/1.1" 404 Not Found
+INFO:     20.29.36.16:45276 - "GET / HTTP/1.1" 404 Not Found
+INFO:     111.113.89.48:30768 - "GET / HTTP/1.1" 404 Not Found
+INFO:     220.250.11.95:26514 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Unsupported upgrade request.
+WARNING:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+INFO:     47.103.155.228:52686 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.149:58662 - "GET / HTTP/1.1" 404 Not Found
+INFO:     185.247.137.100:45685 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     205.210.31.240:60378 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     115.231.78.7:53641 - "GET / HTTP/1.1" 404 Not Found
+INFO:     115.231.78.7:35624 - "GET / HTTP/1.1" 404 Not Found
+INFO:     115.231.78.7:56181 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     115.231.78.7:53378 - "GET /robots.txt HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.138.163:52398 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.163:55712 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.163:55736 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.138.163:37532 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.145.108:48038 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.145.108:60976 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.145.108:60994 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.145.108:49290 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     205.210.31.18:65388 - "GET / HTTP/1.1" 404 Not Found
+INFO:     118.123.1.39:52646 - "GET /stylesheets/theme.css HTTP/1.1" 404 Not Found
+INFO:     118.123.1.39:52648 - "GET /customer/js/lang_zh_tw.js HTTP/1.1" 404 Not Found
+INFO:     118.123.1.39:52652 - "GET /login/stylesheets/theme.css HTTP/1.1" 404 Not Found
+INFO:     118.123.1.39:52654 - "GET /public/stylesheets/theme.css HTTP/1.1" 404 Not Found
+INFO:     118.123.1.39:52656 - "GET /index.php HTTP/1.1" 404 Not Found
+INFO:     118.123.1.39:52660 - "GET / HTTP/1.1" 404 Not Found
+INFO:     118.123.1.39:52662 - "GET /chs/js/lang_zh_tw.js HTTP/1.1" 404 Not Found
+INFO:     118.123.1.39:52664 - "GET /index.php HTTP/1.1" 404 Not Found
+INFO:     118.123.1.39:52668 - "GET /ips/index.php HTTP/1.1" 404 Not Found
+INFO:     45.156.128.97:58979 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.66:65150 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     59.82.21.85:29251 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.215.188.50:53420 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     142.93.3.4:60444 - "GET /squid-internal-mgr/cachemgr.cgi HTTP/1.1" 404 Not Found
+INFO:     223.113.128.133:57730 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     106.14.60.104:46784 - "GET / HTTP/1.1" 404 Not Found
+INFO:     106.14.60.104:46784 - "GET /explicit_not_exist_path HTTP/1.1" 404 Not Found
+INFO:     106.14.60.104:46784 - "GET /admin/ HTTP/1.1" 404 Not Found
+INFO:     106.14.60.104:46784 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     106.14.60.104:46784 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     106.14.60.104:46784 - "GET /images/ofbiz.ico HTTP/1.1" 404 Not Found
+INFO:     106.14.60.104:46784 - "GET /phpMyAdmin/ HTTP/1.1" 404 Not Found
+INFO:     106.14.60.104:46784 - "GET /phpmyadmin/ HTTP/1.1" 404 Not Found
+INFO:     106.14.60.104:46784 - "GET /wcm/ HTTP/1.1" 404 Not Found
+INFO:     172.172.245.200:56676 - "GET /setup/eureka_info HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     39.103.166.74:56224 - "GET / HTTP/1.0" 404 Not Found
+INFO:     39.103.166.74:58496 - "GET /nice%20ports%2C/Trinity.txt.bak HTTP/1.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     39.103.166.74:35698 - "OPTIONS / HTTP/1.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     39.103.166.74:41722 - "GET /nmaplowercheck1743041009 HTTP/1.1" 404 Not Found
+INFO:     39.103.166.74:41754 - "GET /HNAP1 HTTP/1.1" 404 Not Found
+INFO:     39.103.166.74:41874 - "GET /evox/about HTTP/1.1" 404 Not Found
+INFO:     39.103.166.74:46484 - "POST /sdk HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     39.103.166.74:51232 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     205.210.31.12:62900 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.42:57536 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.42:52790 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     162.142.125.42:47708 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     185.226.197.40:49397 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Unsupported upgrade request.
+WARNING:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+INFO:     47.103.37.203:42734 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     204.76.203.41:45416 - "CONNECT web.realsysadm.in%3A443 HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     36.41.64.64:34470 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.64.64:34456 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.93.231:43630 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.71.23:33712 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.64.81:46302 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.66.8:35178 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.64.81:46518 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.80.245:42134 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.88.153:39170 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.64.218:43168 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.12.197:41318 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.13.184:57972 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.33.80:45076 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.71.209:48402 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.82.172:53224 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.82.88:53410 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.85.73:33808 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.32.51:49140 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.228:35138 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.90.73:53806 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.67.60:49066 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.250:33806 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.86.87:39532 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.229:46268 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.84.4:34584 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.64.81:47922 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.33.86:52154 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.84.143:48012 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.85.73:34524 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.33.85:59044 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.56:38800 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.13.179:60876 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.82.172:54316 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.56:38978 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.33.95:60114 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.70.185:58680 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.90.151:51804 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.32.51:50166 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.93.177:58460 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.80.133:47572 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.84.143:48316 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.94.205:41816 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.84.160:56974 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.87.114:42574 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.86.141:50640 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.86.38:55370 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.69.15:59608 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.85.73:35314 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.32.51:50444 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.84.143:48638 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.94.205:42410 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.33.84:50082 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.71.209:51424 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.87.14:38262 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.85.139:42658 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.87.37:38188 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.67.60:50404 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.70.33:57492 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.93.231:47756 - "GET / HTTP/1.1" 404 Not Found
+INFO:      - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.66.8:38820 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.83.5:54584 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.67.89:45804 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.81.2:35770 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.70.185:60110 - "GET / HTTP/1.1" 404 Not Found
+INFO:      - "GET / HTTP/1.1" 404 Not Found
+INFO:      - "GET / HTTP/1.1" 404 Not Found
+INFO:      - "GET / HTTP/1.1" 404 Not Found
+INFO:      - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.83.37:59122 - "GET / HTTP/1.1" 404 Not Found
+INFO:      - "GET / HTTP/1.1" 404 Not Found
+INFO:      - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.228:42060 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.65.253:58832 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.33.103:38330 - "GET / HTTP/1.1" 404 Not Found
+INFO:      - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.84.160:59744 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.84.4:39414 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.84.4:39476 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.71.19:48670 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     206.168.34.71:48970 - "GET / HTTP/1.1" 404 Not Found
+INFO:     206.168.34.71:32862 - "GET / HTTP/1.1" 404 Not Found
+INFO:     206.168.34.71:32884 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     206.168.34.71:32980 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     165.154.11.170:50432 - "GET / HTTP/1.1" 404 Not Found
+INFO:     165.154.11.170:60478 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     165.154.11.170:60488 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     165.154.11.170:60502 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     47.102.210.202:50204 - "GET / HTTP/1.1" 404 Not Found
+INFO:     47.102.210.202:50204 - "GET /explicit_not_exist_path HTTP/1.1" 404 Not Found
+INFO:     47.102.210.202:50204 - "GET /admin/ HTTP/1.1" 404 Not Found
+INFO:     47.102.210.202:50204 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     47.102.210.202:50204 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     47.102.210.202:50204 - "GET /images/ofbiz.ico HTTP/1.1" 404 Not Found
+INFO:     47.102.210.202:50204 - "GET /phpMyAdmin/ HTTP/1.1" 404 Not Found
+INFO:     47.102.210.202:50204 - "GET /phpmyadmin/ HTTP/1.1" 404 Not Found
+INFO:     47.102.210.202:50204 - "GET /wcm/ HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.138.58:54574 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.58:54588 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.138.58:53920 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     87.121.84.132:58088 - "CONNECT ifconfig.co%3A443 HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     47.236.251.77:57176 - "GET http%3A//passport.baidu.com/ HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     198.235.24.29:58132 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.138.182:44648 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.182:33934 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.182:33948 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     20.171.25.72:50360 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     198.235.24.216:57828 - "GET / HTTP/1.1" 404 Not Found
+INFO:     54.193.185.67:44712 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     87.236.176.184:45881 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     134.122.41.182:52180 - "GET /squid-internal-mgr/cachemgr.cgi HTTP/1.1" 404 Not Found
+INFO:     113.215.189.179:42838 - "GET / HTTP/1.1" 404 Not Found
+INFO:     59.82.21.184:27361 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     47.236.251.77:46474 - "GET http%3A//passport.baidu.com/ HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     205.210.31.73:64686 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     3.16.23.188:45988 - "GET / HTTP/1.1" 404 Not Found
+INFO:     3.16.23.188:35336 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     205.210.31.20:65482 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     206.168.34.70:34382 - "GET / HTTP/1.1" 404 Not Found
+INFO:     206.168.34.70:34392 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     206.168.34.70:40062 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     20.65.195.122:48890 - "GET /setup/eureka_info HTTP/1.1" 404 Not Found
+INFO:     59.82.21.211:51083 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.146.57:56904 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.146.57:42766 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.146.57:42790 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.146.57:42844 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     59.82.21.27:53010 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.138.62:54630 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.62:59758 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.62:59780 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.138.62:45776 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.

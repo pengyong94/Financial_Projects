@@ -1,0 +1,1 @@
+from .deepseek_tokenizer import compute_encode
