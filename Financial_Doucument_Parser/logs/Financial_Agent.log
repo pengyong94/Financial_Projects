@@ -690,3 +690,748 @@ INFO:     167.94.138.62:59780 - "PRI %2A HTTP/2.0" 404 Not Found
 WARNING:  Invalid HTTP request received.
 INFO:     167.94.138.62:45776 - "GET /favicon.ico HTTP/1.1" 404 Not Found
 WARNING:  Invalid HTTP request received.
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [133]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+INFO:     121.199.20.25:56082 - "POST /extract_document HTTP/1.1" 200 OK
+INFO:     154.198.215.69:11629 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:19403 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:10497 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:22995 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:31367 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:28907 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:19941 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:23931 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:25443 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:34385 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:12865 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:35021 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:25967 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:31239 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:34943 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:21759 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:29277 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:33051 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:21313 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:17807 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:33863 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:11055 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:32627 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:37403 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:19233 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:17403 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:19119 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:25285 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:19703 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:28171 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:11423 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:31393 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:31139 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:17119 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:29017 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:26739 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:34637 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:27831 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:34513 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:11707 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:24701 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:20881 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:25825 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:31449 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:19101 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:25031 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:29495 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:35897 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:25233 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:19729 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:26831 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:25959 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:15985 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:13703 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:15941 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:17481 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:29719 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:28181 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:24551 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:35305 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:32099 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:21967 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:21011 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:35825 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:21311 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:24209 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:37223 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:26745 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:18589 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:37029 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:24213 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     199.45.154.139:44642 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.154.139:45534 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.154.139:36846 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     199.45.154.139:36874 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     154.198.215.69:19005 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:21291 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:15891 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:32599 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:17453 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:27535 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:25075 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:19503 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:37273 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:19935 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:19367 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:24405 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:28471 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:17227 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:27581 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:16165 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:33991 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:13931 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:10777 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:34087 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:10319 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:31749 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:26547 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:34105 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:31371 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:36297 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:32561 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:12117 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:28477 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:24369 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:11481 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:16167 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:10515 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:25575 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:35475 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:32619 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:26811 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:29713 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:28459 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:22345 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:20573 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:25957 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:13745 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:29577 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:27133 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:20815 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:31361 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:30343 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:28937 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:10233 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:23885 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:31429 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:34185 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:33619 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:27703 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:16839 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:21153 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:29135 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:24777 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:15937 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:26037 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:32749 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:21801 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:30205 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:13529 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     59.82.21.187:49851 - "GET / HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:14183 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:31719 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:36807 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:27447 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:29723 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:10783 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:26629 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:36953 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:16563 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:33125 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:27347 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:23671 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:27247 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:31799 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:35561 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:27637 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:20333 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:19621 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:19097 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:26757 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:28635 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:28917 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:14697 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:11171 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:13799 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:25685 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:15337 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:22253 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:14817 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:12953 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:27193 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:18899 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:35519 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:21665 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:19883 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:24585 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:22325 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:17897 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:21733 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:13367 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:18613 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:18937 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:19621 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:25997 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:31321 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:12271 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:33777 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:20737 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:11297 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:16405 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:31739 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:21799 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:10839 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:19359 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:21519 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:30743 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:31125 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:25511 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:32851 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:30791 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:37083 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:10003 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:37217 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:29723 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:27639 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:12919 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:24895 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:23365 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:19495 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:27873 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:29809 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [133]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [149]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+INFO:     121.199.20.25:47812 - "POST /preprocess_asset HTTP/1.1" 422 Unprocessable Entity
+INFO:     154.198.215.69:37423 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:37109 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:26613 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:36593 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:23755 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:15443 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:25321 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:24787 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:21641 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:18455 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:27603 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:28217 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:87: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  result = fileprocessor.process_asset(request.dict())
+INFO:     121.199.20.25:60204 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     154.198.215.69:10673 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:34727 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:33287 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:37163 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:26973 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:30075 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:10801 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:25201 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:26869 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:14623 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:11105 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:20807 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:27903 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:32119 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:36981 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:10137 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:14427 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:32719 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:25863 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:26575 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:31335 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:19377 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:34799 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:22597 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [149]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [168]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:87: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  result = fileprocessor.process_asset(request.dict())
+INFO:     121.199.20.25:33186 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     121.199.20.25:36896 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     154.198.215.69:34905 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:34091 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:13269 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:30369 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:35335 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:24681 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     121.199.20.25:43914 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     154.198.215.69:10355 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:36257 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:10923 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:27469 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:24883 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:31633 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:31501 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:21565 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:31485 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:26957 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:16785 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:35647 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:12125 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:17517 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:32077 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:35015 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:34141 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:35895 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     121.199.20.25:58100 - "POST /extract_document HTTP/1.1" 200 OK
+INFO:     154.198.215.69:18741 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:30951 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:30123 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:20237 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:18729 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:13801 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:26809 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:26901 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:35023 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:16757 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:15615 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:18427 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     118.123.1.36:54230 - "GET /login/stylesheets/theme.css HTTP/1.1" 404 Not Found
+INFO:     118.123.1.36:54242 - "GET /ips/index.php HTTP/1.1" 404 Not Found
+INFO:     118.123.1.36:54234 - "GET /chs/js/lang_zh_tw.js HTTP/1.1" 404 Not Found
+INFO:     118.123.1.36:54248 - "GET /public/stylesheets/theme.css HTTP/1.1" 404 Not Found
+INFO:     118.123.1.36:54246 - "GET / HTTP/1.1" 404 Not Found
+INFO:     118.123.1.36:54252 - "GET /stylesheets/theme.css HTTP/1.1" 404 Not Found
+INFO:     118.123.1.36:54254 - "GET /customer/js/lang_zh_tw.js HTTP/1.1" 404 Not Found
+INFO:     118.123.1.36:54258 - "GET /index.php HTTP/1.1" 404 Not Found
+INFO:     118.123.1.36:54260 - "GET /index.php HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:14523 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:12073 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:22347 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:10681 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:37255 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:28741 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:22073 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:34935 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:24087 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:14401 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:28939 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:14885 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:17803 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:28799 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:20989 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:31887 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:12461 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:31187 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:20133 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:25667 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:27295 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:21687 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:16515 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:33621 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:34857 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:12707 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:19255 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:28501 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:18381 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:35371 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:28657 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:37231 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:19701 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:11337 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:24039 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:29969 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:34271 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:28293 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:19683 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:19533 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:15629 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:36867 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:16769 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:23075 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:22957 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:25949 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:35773 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:19353 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:16969 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:36419 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:11613 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:36221 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:16765 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:17945 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:23951 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:35457 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:10075 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:10435 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:11837 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:17411 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:22715 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:20013 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:15345 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:11525 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:25727 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:27305 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:25745 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:34641 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:22011 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:17415 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:21561 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:26047 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:13589 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:14849 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:33235 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:24305 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:33451 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:19065 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:18229 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:22059 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:21233 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:36887 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:13027 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:28337 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:26927 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:35511 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:24065 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:15093 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:24023 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:19907 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:31535 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:18991 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:15095 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:24677 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:12327 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:24205 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:28281 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:32633 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:21721 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:15767 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:17305 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:29205 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:17151 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:13109 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:24955 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:23813 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:33263 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:11303 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:23555 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:36303 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:36327 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:17511 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:11753 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:11657 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:26479 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:16265 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:28835 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:34533 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:29589 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:13189 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:17223 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:17101 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:19523 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:25241 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:28577 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:22041 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:20999 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:23031 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:22423 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:20751 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:37217 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:10311 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:24049 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:22929 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:26979 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:23419 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:19763 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:20515 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:18481 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:11373 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     69.164.192.186:40186 - "GET / HTTP/1.0" 404 Not Found
+INFO:     154.198.215.69:15955 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:27897 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:26283 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:29129 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:23263 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:23537 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:12095 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:13159 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:31121 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:17929 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:22981 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:16269 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:13639 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:33853 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:10267 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:24085 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:20061 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:17485 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:28839 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:21457 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:20581 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:28925 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:35187 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:23395 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:32059 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:32565 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:13731 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:16905 - "GET /_stcore/host-config HTTP/1.1" 404 Not Found
+INFO:     154.198.215.69:36205 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.138.178:42278 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.178:42292 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.138.178:33560 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     147.185.132.85:62020 - "GET / HTTP/1.1" 404 Not Found
+INFO:     195.178.110.224:48268 - "GET / HTTP/1.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     198.235.24.35:60800 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     20.171.25.180:49320 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     143.110.150.233:54900 - "GET /squid-internal-mgr/cachemgr.cgi HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     125.122.15.30:36404 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.81.46:45234 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.52:39284 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.90.115:52818 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.12.205:54264 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.80.133:48342 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.84.149:57602 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.68.180:34268 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.67.60:45232 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.33.92:41944 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.33:35736 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.33.92:42428 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.71.178:44046 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.65.26:38222 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.70.228:44488 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.252:59950 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.32.51:51238 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.66.140:53348 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.82.32:59016 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.64.208:52086 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.83.185:33428 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.83.185:33446 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.65.128:55942 - "GET / HTTP/1.1" 404 Not Found
+INFO:      - "GET / HTTP/1.1" 404 Not Found
+INFO:      - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.35:47696 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.85.194:55054 - "GET / HTTP/1.1" 404 Not Found
+INFO:      - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.13.181:43684 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.64.208:52438 - "GET / HTTP/1.1" 404 Not Found
+INFO:      - "GET / HTTP/1.1" 404 Not Found
+INFO:      - "GET / HTTP/1.1" 404 Not Found
+INFO:      - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.70.208:50592 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.93.247:46318 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.84.143:44690 - "GET / HTTP/1.1" 404 Not Found
+INFO:      - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.69.26:47500 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.86.67:49028 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.83.37:56824 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.67.236:39136 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.84.48:57626 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.86.67:49224 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.70.208:51146 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.33.102:33020 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.33.119:44738 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.67.236:40974 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.84.45:34524 - "GET / HTTP/1.1" 404 Not Found
+INFO:      - "GET / HTTP/1.1" 404 Not Found
+INFO:      - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.93.247:48220 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.67.236:41298 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.69.15:38824 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.88.153:36356 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.12.205:58858 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.84.4:36110 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.68.148:49262 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.67.236:42758 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.81.153:46584 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.59:55512 - "GET / HTTP/1.1" 404 Not Found
+INFO:      - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.64.20:38396 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.146.52:59538 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.146.52:54350 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.146.52:54376 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.146.52:54502 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     165.154.104.235:38460 - "GET / HTTP/1.1" 404 Not Found
+INFO:     165.154.104.235:38464 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     165.154.104.235:38466 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     165.154.104.235:38474 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     205.210.31.145:62360 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     147.185.132.195:63748 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.145.109:51804 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.145.109:34818 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.145.109:57780 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.145.109:54918 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     115.231.78.7:35516 - "GET / HTTP/1.1" 404 Not Found
+INFO:     115.231.78.7:53591 - "GET / HTTP/1.1" 404 Not Found
+INFO:     115.231.78.7:23305 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     115.231.78.7:50245 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     185.247.137.87:48903 - "GET / HTTP/1.1" 404 Not Found
+INFO:     44.220.188.222:47274 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.138.182:56590 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.182:35042 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.182:35046 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.138.182:35060 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [168]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [200]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:87: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  result = fileprocessor.process_asset(request.dict())
+INFO:     121.199.20.25:48184 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     121.199.20.25:50946 - "POST /extract_document HTTP/1.1" 200 OK
+INFO:     121.199.20.25:41944 - "POST /extract_document HTTP/1.1" 200 OK
+INFO:     121.199.20.25:59954 - "POST /extract_document HTTP/1.1" 200 OK
+INFO:     121.199.20.25:60402 - "POST /extract_document HTTP/1.1" 200 OK
+INFO:     121.199.20.25:49934 - "POST /extract_document HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [200]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [228]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+INFO:     121.199.20.25:46526 - "POST /extract_document HTTP/1.1" 200 OK
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:87: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  result = fileprocessor.process_asset(request.dict())
+INFO:     121.199.20.25:52202 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [228]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [246]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:87: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  result = fileprocessor.process_asset(request.dict())
+INFO:     121.199.20.25:43380 - "POST /preprocess_asset HTTP/1.1" 500 Internal Server Error
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [246]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [263]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:87: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  result = fileprocessor.process_asset(request.dict())
+INFO:     121.199.20.25:48402 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     121.199.20.25:33082 - "POST /extract_document HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     91.196.152.109:38157 - "GET / HTTP/1.1" 404 Not Found
+INFO:     91.196.152.4:58823 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     48.216.248.255:59092 - "GET /setup/eureka_info HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     198.235.24.104:60190 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     161.35.236.158:53892 - "GET /squid-internal-mgr/cachemgr.cgi HTTP/1.1" 404 Not Found
+INFO:     198.235.24.150:58150 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [263]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [288]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+INFO:     121.199.20.25:57386 - "POST /extract_document HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     45.33.109.18:47683 - "GET / HTTP/1.1" 404 Not Found
+INFO:     66.175.213.4:18536 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     59.82.135.235:16031 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.185:51930 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.185:51932 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.138.185:39410 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     205.210.31.198:59776 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.23:61766 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.215.189.163:26693 - "GET / HTTP/1.1" 404 Not Found
+INFO:     218.77.64.132:37314 - "GET / HTTP/1.0" 404 Not Found
+INFO:     218.77.64.132:34162 - "HEAD / HTTP/1.1" 404 Not Found
+INFO:     218.77.64.132:34164 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     47.236.251.77:53960 - "GET http%3A//passport.baidu.com/ HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     172.212.103.174:41230 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     47.236.251.77:56740 - "GET http%3A//passport.baidu.com/ HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     198.235.24.9:57976 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     15.235.189.157:37361 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     154.198.215.69:33069 - "GET /_stcore/health HTTP/1.1" 404 Not Found
+INFO:     87.236.176.106:51073 - "GET / HTTP/1.1" 404 Not Found

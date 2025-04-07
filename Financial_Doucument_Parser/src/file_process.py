@@ -9,13 +9,15 @@ import cv2
 import numpy as np
 from utils.file2md import TextinOcr
 from utils import DeepSeek_Vendors, info_logger
+import shutil
+
 
 
 class FileProcessor:
     def __init__(self):
         self._load_config()
         self._init_clients()
-        self._validate_directories()
+        # self._validate_directories()
 
     def _load_config(self):
         """加载配置文件"""
@@ -49,9 +51,13 @@ class FileProcessor:
         """处理资产目录的主入口"""
         trace_id = request_data['trace_id']
         asset_dir = request_data['asset_dir']
+        save_dir = request_data['save_dir']
+        if save_dir:
+            self.DEFAULT_SAVE_BASE = save_dir
+        self._validate_directories()
         
         # 初始化路径
-        base_dir = self._prepare_directories(trace_id)
+        base_dir = self._prepare_directories()
         results = []
         
         # 处理图片文件
@@ -69,14 +75,12 @@ class FileProcessor:
         # 保存最终结果
         return self._save_final_results(base_dir, trace_id, results)
 
-    def _prepare_directories(self, trace_id):
+    def _prepare_directories(self):
         """创建处理所需目录结构"""
-        base_dir = os.path.join(self.DEFAULT_SAVE_BASE, str(trace_id))
+        base_dir = self.DEFAULT_SAVE_BASE
         dirs = {
             'base': base_dir,
-            'json': os.path.join(base_dir, "json_result"),
-            'images': os.path.join(base_dir, "pdf_images")
-        }
+            'json': os.path.join(base_dir, "json_result")}
         
         for d in dirs.values():
             os.makedirs(d, exist_ok=True)
@@ -104,8 +108,7 @@ class FileProcessor:
             
         file_maps = self._file_to_markdown(image_files, base_dir['json'], tag="image")
         info_logger.info(f"=====file maps:{file_maps}")
-        save_path = os.path.join(base_dir['json'], f"img_results.json")
-        self._extract_contents(base_dir['json'], save_path)
+        save_path = self._extract_contents(base_dir['json'])
         return self._classify_documents(save_path, file_maps)
 
     def _process_pdf_files(self, pdf_files, base_dir):
@@ -114,15 +117,17 @@ class FileProcessor:
         
         for pdf_path in pdf_files:
             pdf_name = os.path.basename(pdf_path).split('.')[0]
-            img_dir = os.path.join(base_dir['images'], pdf_name)
-            os.makedirs(img_dir, exist_ok=True)
+            pdf_img_dir = os.path.join(base_dir['base'], pdf_name)
+            json_dir = base_dir['json']
+            os.makedirs(pdf_img_dir, exist_ok=True)
             
             # PDF转图片并处理
-            img_paths = self._pdf_to_images(pdf_path, img_dir)
-            file_maps = self._file_to_markdown(img_paths, img_dir, tag="pdf")
+            img_paths = self._pdf_to_images(pdf_path, pdf_img_dir)
+            file_maps = self._file_to_markdown(img_paths, json_dir, tag="pdf")
             results.append({
                 "doc_files": img_paths,
                 "annotation": pdf_name,
+                'path':pdf_img_dir,
                 "json_files": file_maps
             })
         return results
@@ -137,6 +142,9 @@ class FileProcessor:
                 img_path = os.path.join(save_dir, f"{os.path.basename(pdf_path)}_{page_num}.png")
                 pix.save(img_path)
                 img_paths.append(img_path)
+            
+            ### 将pdf文件拷贝到路径            
+            shutil.copy(pdf_path, save_dir)
         return img_paths
 
     def _file_to_markdown(self, file_paths, output_dir, tag):
@@ -146,6 +154,9 @@ class FileProcessor:
         for path in file_paths:
             try:
                 resp = self.textin_ocr.recognize_pdf2md(path)
+                if resp.status_code != 200:
+                    info_logger.error(f"文件转换md失败 {path}: {resp.status_code}")
+                    continue
                 result = json.loads(resp.text)
                 # info_logger.info(f"===markdown parse result:{result}")
                 # 获取保存路径并存储到映射关系
@@ -176,7 +187,7 @@ class FileProcessor:
             info_logger.critical(f"文件写入失败 {save_path}: {str(e)}")
             return None  # 返回空值避免后续映射错误
 
-    def _extract_contents(self, input_dir, output_path):
+    def _extract_contents(self, input_dir):
         """从JSON文件中提取内容特征"""
         contents = []
         
@@ -199,8 +210,11 @@ class FileProcessor:
             except Exception as e:
                 info_logger.exception(f"====filepath:{filepath} fail!!!")
         
-        with open(output_path, 'w', encoding='utf-8') as f:
-            json.dump(contents, f, ensure_ascii=False)
+        save_path = os.path.join(input_dir, "img_results.json")
+        with open(save_path, 'w', encoding='utf-8') as f:
+            json.dump(contents, f, ensure_ascii=False)  
+
+        return save_path
 
     def _process_content(self, markdown):
         """处理Markdown内容"""
@@ -256,6 +270,10 @@ class FileProcessor:
         for ids, reason in matches:
             if not ids:
                 continue
+
+            ## 根据reason创建文件夹
+            reason_dir = os.path.join(self.DEFAULT_SAVE_BASE, reason)
+            os.makedirs(reason_dir, exist_ok=True)
                 
             # 获取对应的文件路径
             file_paths = [id_to_path.get(id_str.strip()) for id_str in ids.split(',')]
@@ -263,15 +281,29 @@ class FileProcessor:
             file_paths = [p for p in file_paths if p]
             
             # 构建json文件映射
-            json_files = {
-                path: file_maps[path]
-                for path in file_paths
-                if path in file_maps
-            }
+            json_files = {}
+            new_file_paths = []
+            for path in file_paths:
+                if path in file_maps:
+                    file_name = os.path.basename(path)
+                    new_file_path = os.path.join(reason_dir, file_name)
+                    json_files[new_file_path] = file_maps[path]
+                    new_file_paths.append(new_file_path)
+                    shutil.copyfile(path, new_file_path)
+                    info_logger.info(f"文件已复制: {path} -> {new_file_path}")
+
+
+            # 移动文件到对应的分类目录
+            # for file_path in file_paths:
+            #     file_name = os.path.basename(file_path)
+            #     if os.path.exists(file_path):
+            #         shutil.copyfile(file_path, reason_dir)
+            #         info_logger.info(f"文件已复制到: {file_path} -> {reason_dir}")
             
             results.append({
-                'doc_files': file_paths,
+                'doc_files': new_file_paths,
                 'annotation': reason,
+                'path': reason_dir,
                 'json_files': json_files
             })
             

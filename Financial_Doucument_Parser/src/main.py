@@ -54,6 +54,7 @@ class PREPROCESSRequest(BaseModel):
 	trace_id: str
 	client: str
 	asset_dir: str
+	save_dir: str
 
 # 添加新的请求模型
 class ExtractRequest(BaseModel):
@@ -91,9 +92,7 @@ async def process_asset(request: PREPROCESSRequest):
 		return {
 			"code": 200,
 			"msg": "Success",
-			"data": result
-
-		}
+			"data": result}
 	except Exception as e:
 		info_logger.exception(f"TTS API error: {str(e)}")
 		raise HTTPException(status_code=500, detail=str(e))

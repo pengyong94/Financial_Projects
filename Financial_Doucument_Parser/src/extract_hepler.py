@@ -23,6 +23,7 @@ class ExtractHelper:
 
         # 提取的业务字段
         self.field_path = self.config.get('BUSINESS_CONFIG', 'field_path')  
+        self.field_zh_en_pairs = self.config.get('BUSINESS_CONFIG', 'field_zh_en_pairs')  
         
         # 初始化 DeepSeek 客户端
         self.ds_vendor = DeepSeek_Vendors(self.api_key, self.base_url)
@@ -30,6 +31,17 @@ class ExtractHelper:
 
         # 加载提取提示和字段
         self.extract_items_prompt, self.fields = self._get_extract_items_prompt()
+        self.field_zh_en_maps = self._get_field_zh_en_pairs()
+
+    def _get_field_zh_en_pairs(self):
+        """获取中文和英文字段的映射"""
+        if not os.path.exists(self.field_zh_en_pairs):
+            raise FileNotFoundError(f"File not found: {self.field_zh_en_pairs}")
+        
+        with open(self.field_zh_en_pairs, 'r', encoding='utf-8') as f:
+            field_zh_en_pairs = json.load(f)
+        
+        return field_zh_en_pairs
 
     def _get_extract_items_prompt(self):
         """获取提取字段的提示"""
@@ -91,7 +103,8 @@ class ExtractHelper:
             try:
               json_files = result['json_files']
               doc_files = result['doc_files']
-              extract_result = {field: [] for field in self.fields}
+              # extract_result = {field: [{"zh_name":self.field_zh_en_maps[field]}] for field in self.fields}
+              extract_result = {field: {"zh_name":self.field_zh_en_maps[field],"contents":[]} for field in self.fields}
 
               ### 遍历所有的图片进行处理
               for img_path in doc_files:
@@ -140,7 +153,7 @@ class ExtractHelper:
                     if value in detail['text']:
                         position = detail['position']
                         cur_results['position'] = position
-                        extract_result[field].append(cur_results)
+                        extract_result[field]['contents'].append(cur_results)
                         info_logger.info(f"extract_result: {extract_result}")
                 
                 if not position:
