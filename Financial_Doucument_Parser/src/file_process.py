@@ -25,8 +25,6 @@ class FileProcessor:
     def __init__(self):
         self._load_config()
         self._init_clients()
-        self.redis = None  # 初始化为 None
-        # self._validate_directories()
 
     @classmethod
     async def create(cls):
@@ -55,34 +53,12 @@ class FileProcessor:
         self.CONTENT_SPANS = self.config.getint('FILE_PROCESS', 'content_spans')
 
         # 添加 Redis 配置
-        self.redis_host = os.getenv('REDIS_HOST', self.config.get('REDIS', 'host', fallback='localhost'))
-        self.redis_port = int(os.getenv('REDIS_PORT', self.config.get('REDIS', 'port', fallback='6379')))
-        self.redis_db = int(os.getenv('REDIS_DB', self.config.get('REDIS', 'db', fallback='0')))
-        self.redis_required = self.config.getboolean('REDIS', 'required', fallback=False)
 
     def _init_clients(self):
         """初始化第三方服务客户端"""
         self.ds_vendor = DeepSeek_Vendors(self.api_key, self.base_url)
         self.textin_ocr = TextinOcr(self.key_id, self.secret_id)
 
-    async def _init_redis(self):
-        """异步初始化Redis连接"""
-        try:
-            self.redis = Redis(
-                host=self.redis_host,
-                port=self.redis_port,
-                db=self.redis_db,
-                decode_responses=True
-            )
-            # 测试连接
-            await self.redis.ping()
-            info_logger.info("Redis connection established")
-        except Exception as e:
-            info_logger.error(f"Failed to connect to Redis: {str(e)}")
-            self.redis = None
-            if self.redis_required:
-                raise
-            info_logger.warning("Redis is not required, continuing without it")
 
     async def close(self):
         """关闭所有连接"""
@@ -112,10 +88,10 @@ class FileProcessor:
 
     def _prepare_directories(self):
         """创建处理所需目录结构"""
-        base_dir = self.DEFAULT_SAVE_BASE
         dirs = {
-            'base': base_dir,
-            'json': os.path.join(base_dir, "json_result")
+            'base': self.DEFAULT_SAVE_BASE,
+            # 'json': os.path.join(base_dir, "json_result")
+            'json': os.path.join(self.DEFAULT_SAVE_BASE, "json_result")
         }
         
         for d in dirs.values():
@@ -149,19 +125,12 @@ class FileProcessor:
         """异步处理资产的主入口"""
         trace_id = request_data['trace_id']
         try:
-            # 只在必需时尝试初始化Redis
-            if self.redis_required and not self.redis:
-                await self._init_redis()
-                
-            # 确保即使没有Redis也能继续执行
-            if self.redis:
-                await self.update_task_status(trace_id, 'processing', 0.0)
             
             asset_dir = request_data['asset_dir']
-            save_dir = request_data.get('save_dir', '')
-            
+            save_dir = request_data.get('save_dir')
             if save_dir:
                 self.DEFAULT_SAVE_BASE = save_dir
+                info_logger.info(f"Processing asset directory: {asset_dir}")
             self._validate_directories()
             
             base_dir = self._prepare_directories()
@@ -185,8 +154,8 @@ class FileProcessor:
                 if isinstance(result, list):
                     results.extend(result)
                     
-            if self.redis:
-                await self.update_task_status(trace_id, 'completed', 1.0)
+            # if self.redis:
+            #     await self.update_task_status(trace_id, 'completed', 1.0)
             return self._save_final_results(base_dir, trace_id, results)
             
         except Exception as e:
@@ -275,9 +244,10 @@ class FileProcessor:
 
     async def _save_md_result(self, data, src_path, output_dir, tag="file"):
         """异步保存Markdown结果"""
-        filename = f"{os.path.basename(src_path)}_{tag}.json"
+        timestamp = str(int(time.time()))
+        filename = f"{timestamp}_{os.path.basename(src_path)}_{tag}.json"
         save_path = os.path.join(output_dir, filename)
-        
+        info_logger.info(f"Saving json result to {save_path}")
         try:
             async with aiofiles.open(save_path, 'w', encoding='utf-8') as f:
                 await f.write(json.dumps({

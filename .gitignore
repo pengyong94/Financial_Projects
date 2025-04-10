@@ -1,0 +1,8 @@
+resource_data/*
+test_datas/*
+config.ini
+config/*
+logs/*
+*.json
+*.pyc
+*.log

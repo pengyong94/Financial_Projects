@@ -9,7 +9,7 @@ id = str(uuid.uuid4())
 # 测试配置
 BASE_URL = "http://121.199.20.25:8008"
 # BASE_URL = "http://localhost:8008"
-TEST_ASSET_DIR = "test_datas/2025030210001"  # 需提前准备测试数据目录
+TEST_ASSET_DIR = "/data/AI_Projects/Financial_Doucument_Parser/test_datas/2025030210001"  # 需提前准备测试数据目录
 INVALID_DIR = "non_existing_directory"
 TEST_TRACE_ID = f"test_trace_{id}"
 SAVE_DIR = f"/data/finance/bank_documents/result/{TEST_TRACE_ID}"

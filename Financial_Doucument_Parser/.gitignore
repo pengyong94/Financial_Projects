@@ -5,3 +5,4 @@ config/*
 logs/*
 *.json
 *.pyc
+*.log
