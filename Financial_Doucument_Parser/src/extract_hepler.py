@@ -75,13 +75,18 @@ class ExtractHelper:
         finally_prompt = beginpart + "\n\n" + extract_items_content + "\n" + backpart
         return finally_prompt, fields
 
-    def generate_extract_infos(self, content):
-        """生成内容摘要"""
-        messages = [
-            {"role": "system", "content": self.extract_items_prompt},
-            {"role": "user", "content": f"文档内容:\n{content}"}
-        ]
-        return self.ds_vendor.chat(messages, self.model_name)[0]
+    async def generate_extract_infos(self, content):
+        """异步生成内容摘要"""
+        try:
+            messages = [
+                {"role": "system", "content": self.extract_items_prompt},
+                {"role": "user", "content": f"文档内容:\n{content}"}
+            ]
+            result = await self.ds_vendor.chat(messages, self.model_name)
+            return result[0] if result else ""
+        except Exception as e:
+            info_logger.error(f"Error in generate_extract_infos: {str(e)}")
+            return ""
 
     @staticmethod
     def extract_xml(text: str, tag: str) -> str:
@@ -97,47 +102,45 @@ class ExtractHelper:
             field_maps[field] = cur_result
         return field_maps
 
-    def process_file(self, datas: str) -> list:
-        """处理单个结果文件"""
+    async def process_file(self, datas: str) -> list:
+        """异步处理提取"""
         for result in datas:
             try:
-              json_files = result['json_files']
-              doc_files = result['doc_files']
-              # extract_result = {field: [{"zh_name":self.field_zh_en_maps[field]}] for field in self.fields}
-              extract_result = {field: {"zh_name":self.field_zh_en_maps[field],"contents":[]} for field in self.fields}
+                json_files = result['json_files']
+                doc_files = result['doc_files']
+                extract_result = {field: {"zh_name":self.field_zh_en_maps[field],"contents":[]} for field in self.fields}
 
-              ### 遍历所有的图片进行处理
-              for img_path in doc_files:
-                  if json_files.get(img_path) is None:
-                      info_logger.warning(f"{img_path} json_file not exists: {img_path}")
-                      ### 实时的解析图片
-                      resp = self.textin_ocr.recognize_pdf2md(img_path)
-                      json_data = json.loads(resp.text)
-                  else:
-                      json_file = json_files[img_path]
-                      if not os.path.exists(json_file):
-                          info_logger.info(f"json_file not exists: {json_file}")
-                          continue
-                      with open(json_file, 'r', encoding='utf-8') as f:
-                          json_data = json.load(f)
+                ### 遍历所有的图片进行处理
+                for img_path in doc_files:
+                    if json_files.get(img_path) is None:
+                        info_logger.warning(f"{img_path} json_file not exists: {img_path}")
+                        ### 实时的解析图片
+                        json_data = await self.textin_ocr.recognize_pdf2md(img_path)
+                    else:
+                        json_file = json_files[img_path]
+                        if not os.path.exists(json_file):
+                            info_logger.info(f"json_file not exists: {json_file}")
+                            continue
+                        with open(json_file, 'r', encoding='utf-8') as f:
+                            json_data = json.load(f)
 
-                  markdown_content = json_data['result']['markdown']
-                  markdown_details = json_data['result']['detail']
-                  
-                  extracted_text = self.generate_extract_infos(markdown_content)
-                  cur_file_result = self.extract_form_data(extracted_text)
-                  
-                  self._process_extracted_results(cur_file_result, img_path, markdown_details, extract_result)
-              
-              result['extract_result'] = extract_result
-              info_logger.info(f"extract_result: {extract_result}")
+                    markdown_content = json_data['result']['markdown']
+                    markdown_details = json_data['result']['detail']
+                    
+                    extracted_text = await self.generate_extract_infos(markdown_content)
+                    cur_file_result = self.extract_form_data(extracted_text)
+                    
+                    await self._process_extracted_results(cur_file_result, img_path, markdown_details, extract_result)
+
+                result['extract_result'] = extract_result
+                info_logger.info(f"extract_result: {extract_result}")
             except Exception as e:
                 info_logger.exception(f"Error processing file: {result}, error: {str(e)}")
                             
         return datas
 
-    def _process_extracted_results(self, cur_file_result, img_path, markdown_details, extract_result):
-        """处理提取的结果"""
+    async def _process_extracted_results(self, cur_file_result, img_path, markdown_details, extract_result):
+        """异步处理提取结果"""
         for field, value in cur_file_result.items():
             if value != "":
                 position = []
@@ -161,7 +164,7 @@ class ExtractHelper:
             else:
                 info_logger.info(f"{field} value is empty")
 
-def main():
+async def main():
     extractor = ExtractHelper()
     datas = [
         {
@@ -256,10 +259,10 @@ def main():
           }
         }
       ]
-    results = extractor.process_file(datas)
+    results = await extractor.process_file(datas)
     
     with open('test_datas/results_test/fcls_result_finally2.json', 'w', encoding='utf-8') as f:
         json.dump(results, f, ensure_ascii=False, indent=4)
 
 if __name__ == '__main__':
-    main()
+    asyncio.run(main())

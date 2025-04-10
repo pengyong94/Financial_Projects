@@ -1,15 +1,23 @@
 import sys
 import os
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(PROJECT_ROOT)
 import json
 import re
 import time
 import configparser
 import fitz
 import cv2
+import uuid
 import numpy as np
+from utils.api import DeepSeek_Vendors
 from utils.file2md import TextinOcr
-from utils import DeepSeek_Vendors, info_logger
+from utils.logger import info_logger, filter as trace_filter  # 重命名 filter 导入
 import shutil
+import asyncio
+from redis.asyncio import Redis  # 替换 aioredis 导入
+import aiofiles
+from typing import Dict, List
 
 
 
@@ -17,7 +25,15 @@ class FileProcessor:
     def __init__(self):
         self._load_config()
         self._init_clients()
+        self.redis = None  # 初始化为 None
         # self._validate_directories()
+
+    @classmethod
+    async def create(cls):
+        """异步工厂方法创建实例"""
+        instance = cls()
+        await instance._init_redis()
+        return instance
 
     def _load_config(self):
         """加载配置文件"""
@@ -38,92 +54,179 @@ class FileProcessor:
         self.DEFAULT_SAVE_BASE = self.config.get('FILE_PROCESS', 'default_save_base')
         self.CONTENT_SPANS = self.config.getint('FILE_PROCESS', 'content_spans')
 
+        # 添加 Redis 配置
+        self.redis_host = os.getenv('REDIS_HOST', self.config.get('REDIS', 'host', fallback='localhost'))
+        self.redis_port = int(os.getenv('REDIS_PORT', self.config.get('REDIS', 'port', fallback='6379')))
+        self.redis_db = int(os.getenv('REDIS_DB', self.config.get('REDIS', 'db', fallback='0')))
+        self.redis_required = self.config.getboolean('REDIS', 'required', fallback=False)
+
     def _init_clients(self):
         """初始化第三方服务客户端"""
         self.ds_vendor = DeepSeek_Vendors(self.api_key, self.base_url)
         self.textin_ocr = TextinOcr(self.key_id, self.secret_id)
 
+    async def _init_redis(self):
+        """异步初始化Redis连接"""
+        try:
+            self.redis = Redis(
+                host=self.redis_host,
+                port=self.redis_port,
+                db=self.redis_db,
+                decode_responses=True
+            )
+            # 测试连接
+            await self.redis.ping()
+            info_logger.info("Redis connection established")
+        except Exception as e:
+            info_logger.error(f"Failed to connect to Redis: {str(e)}")
+            self.redis = None
+            if self.redis_required:
+                raise
+            info_logger.warning("Redis is not required, continuing without it")
+
+    async def close(self):
+        """关闭所有连接"""
+        if self.redis:
+            await self.redis.close()
+        await self.textin_ocr.close()
+
+    async def update_task_status(self, trace_id: str, status: str, progress: float = 0):
+        """更新任务状态"""
+        if not self.redis:
+            info_logger.warning("Redis not available, skipping status update")
+            return
+            
+        try:
+            await self.redis.hset(f"task:{trace_id}", 
+                                mapping={
+                                    'status': status,
+                                    'progress': str(progress),
+                                    'update_time': str(int(time.time()))
+                                })
+        except Exception as e:
+            info_logger.error(f"Failed to update task status: {str(e)}")
+
     def _validate_directories(self):
         """验证基础目录结构"""
         os.makedirs(self.DEFAULT_SAVE_BASE, exist_ok=True)
-
-    def process_asset(self, request_data):
-        """处理资产目录的主入口"""
-        trace_id = request_data['trace_id']
-        asset_dir = request_data['asset_dir']
-        save_dir = request_data['save_dir']
-        if save_dir:
-            self.DEFAULT_SAVE_BASE = save_dir
-        self._validate_directories()
-        
-        # 初始化路径
-        base_dir = self._prepare_directories()
-        results = []
-        
-        # 处理图片文件
-        images, pdfs = self._classify_files(asset_dir)
-        info_logger.info(f"====classify_files result:{images} \n {pdfs}")
-        if images:
-            img_results = self._process_image_files(images, base_dir)
-            results.extend(img_results)
-        
-        # 处理PDF文件
-        if pdfs:
-            pdf_results = self._process_pdf_files(pdfs, base_dir)
-            results.extend(pdf_results)
-        
-        # 保存最终结果
-        return self._save_final_results(base_dir, trace_id, results)
 
     def _prepare_directories(self):
         """创建处理所需目录结构"""
         base_dir = self.DEFAULT_SAVE_BASE
         dirs = {
             'base': base_dir,
-            'json': os.path.join(base_dir, "json_result")}
+            'json': os.path.join(base_dir, "json_result")
+        }
         
         for d in dirs.values():
             os.makedirs(d, exist_ok=True)
+            
         return dirs
 
-    def _classify_files(self, asset_dir):
+    def classify_files(self, asset_dir):
         """分类目录中的文件类型"""
         images = []
         pdfs = []
         
+        if not os.path.exists(asset_dir):
+            raise FileNotFoundError(f"Directory not found: {asset_dir}")
+            
         for filename in os.listdir(asset_dir):
             filepath = os.path.join(asset_dir, filename)
+            if not os.path.isfile(filepath):
+                continue
+                
             if filename.lower().endswith(self.IMAGE_EXTENSIONS):
                 images.append(filepath)
             elif filename.lower().endswith('.pdf'):
                 pdfs.append(filepath)
             else:
                 info_logger.warning(f"Unsupported file type: {filename}")
+                
         return images, pdfs
 
-    def _process_image_files(self, image_files, base_dir):
-        """处理图片文件"""
+    async def process_asset(self, request_data: Dict):
+        """异步处理资产的主入口"""
+        trace_id = request_data['trace_id']
+        try:
+            # 只在必需时尝试初始化Redis
+            if self.redis_required and not self.redis:
+                await self._init_redis()
+                
+            # 确保即使没有Redis也能继续执行
+            if self.redis:
+                await self.update_task_status(trace_id, 'processing', 0.0)
+            
+            asset_dir = request_data['asset_dir']
+            save_dir = request_data.get('save_dir', '')
+            
+            if save_dir:
+                self.DEFAULT_SAVE_BASE = save_dir
+            self._validate_directories()
+            
+            base_dir = self._prepare_directories()
+            results = []
+            
+            # 并发处理图片和PDF文件
+            images, pdfs = self.classify_files(asset_dir)
+            info_logger.info(f"Found {len(images)} images and {len(pdfs)} PDFs")
+            
+            tasks = []
+            if images:
+                tasks.append(self._process_image_files(images, base_dir))
+            if pdfs:
+                tasks.append(self._process_pdf_files(pdfs, base_dir))
+            
+            # 并发执行所有任务
+            processed_results = await asyncio.gather(*tasks, return_exceptions=True)
+            
+            # 合并结果
+            for result in processed_results:
+                if isinstance(result, list):
+                    results.extend(result)
+                    
+            if self.redis:
+                await self.update_task_status(trace_id, 'completed', 1.0)
+            return self._save_final_results(base_dir, trace_id, results)
+            
+        except Exception as e:
+            if self.redis:
+                await self.update_task_status(trace_id, 'failed', 0.0)
+            info_logger.error(f"Error in process_asset: {str(e)}")
+            raise
+
+    async def _process_image_files(self, image_files, base_dir):
+        """异步处理图片文件"""
         if not image_files:
             return []
             
-        file_maps = self._file_to_markdown(image_files, base_dir['json'], tag="image")
-        info_logger.info(f"=====file maps:{file_maps}")
-        save_path = self._extract_contents(base_dir['json'])
-        return self._classify_documents(save_path, file_maps)
+        try:
+            file_maps = await self._file_to_markdown(image_files, base_dir['json'], tag="image")
+            info_logger.info(f"=====file maps:{file_maps}")
+            if not file_maps:
+                return []
+                
+            save_path = await self._extract_contents(base_dir['json'])
+            result = await self._classify_documents(save_path, file_maps)
+            return result
+        except Exception as e:
+            info_logger.error(f"Error in _process_image_files: {str(e)}")
+            return []
 
-    def _process_pdf_files(self, pdf_files, base_dir):
-        """处理PDF文件"""
+    async def _process_pdf_files(self, pdf_files, base_dir):
+        """异步处理PDF文件"""
         results = []
         
         for pdf_path in pdf_files:
             pdf_name = os.path.basename(pdf_path).split('.')[0]
-            pdf_img_dir = os.path.join(base_dir['base'], pdf_name)
+            unique_id = uuid.uuid4()
+            pdf_img_dir = os.path.join(base_dir['base'], str(unique_id))
             json_dir = base_dir['json']
             os.makedirs(pdf_img_dir, exist_ok=True)
             
             # PDF转图片并处理
             img_paths = self._pdf_to_images(pdf_path, pdf_img_dir)
-            file_maps = self._file_to_markdown(img_paths, json_dir, tag="pdf")
+            file_maps = await self._file_to_markdown(img_paths, json_dir, tag="pdf")
             results.append({
                 "doc_files": img_paths,
                 "annotation": pdf_name,
@@ -147,54 +250,53 @@ class FileProcessor:
             shutil.copy(pdf_path, save_dir)
         return img_paths
 
-    def _file_to_markdown(self, file_paths, output_dir, tag):
-        """文件转Markdown并保存结果"""
-        file_maps = {}
-        
-        for path in file_paths:
+    async def _file_to_markdown(self, file_paths, output_dir, tag):
+        """并发处理文件转换为Markdown"""
+        async def process_single_file(path):
             try:
-                resp = self.textin_ocr.recognize_pdf2md(path)
-                if resp.status_code != 200:
-                    info_logger.error(f"文件转换md失败 {path}: {resp.status_code}")
-                    continue
-                result = json.loads(resp.text)
-                # info_logger.info(f"===markdown parse result:{result}")
-                # 获取保存路径并存储到映射关系
-                result_path = self._save_md_result(result, path, output_dir, tag)
-                file_maps[path] = result_path  # 使用实际返回的保存路径
-            except json.JSONDecodeError as e:
-                info_logger.error(f"JSON解析失败 {path}: {str(e)}")
+                resp = await self.textin_ocr.recognize_pdf2md(path)
+                if not isinstance(resp, dict) or not resp.get('result'):
+                    info_logger.error(f"Invalid response for {path}")
+                    return None, None
+                
+                result_path = await self._save_md_result(resp, path, output_dir, tag)
+                return path, result_path
             except Exception as e:
-                info_logger.error(f"处理失败 {path}: {str(e)}")
+                info_logger.error(f"Failed to process {path}: {str(e)}")
+                return None, None
+
+        # 并发处理所有文件
+        tasks = [process_single_file(path) for path in file_paths]
+        results = await asyncio.gather(*tasks)
+        
+        # 过滤有效结果并构建映射
+        file_maps = {src: dest for src, dest in results if src and dest}
         return file_maps
 
-    def _save_md_result(self, data, src_path, output_dir, tag="file"):
-        """保存Markdown转换结果并返回存储路径"""
-        # filename = f"{os.path.basename(src_path)}_{time.strftime('%Y%m%d_%H%M%S')}.json"
+    async def _save_md_result(self, data, src_path, output_dir, tag="file"):
+        """异步保存Markdown结果"""
         filename = f"{os.path.basename(src_path)}_{tag}.json"
         save_path = os.path.join(output_dir, filename)
         
         try:
-            with open(save_path, 'w', encoding='utf-8') as f:
-                json.dump({
+            async with aiofiles.open(save_path, 'w', encoding='utf-8') as f:
+                await f.write(json.dumps({
                     'result': data.get('result'),
                     'metrics': data.get('metrics'),
                     'source': src_path
-                }, f, ensure_ascii=False)
-            info_logger.info(f"已保存Markdown解析结果: {save_path}")
-            return save_path  # 明确返回保存路径
+                }, ensure_ascii=False))
+            return save_path
         except IOError as e:
-            info_logger.critical(f"文件写入失败 {save_path}: {str(e)}")
-            return None  # 返回空值避免后续映射错误
+            info_logger.error(f"Failed to save result: {str(e)}")
+            return None
 
-    def _extract_contents(self, input_dir):
-        """从JSON文件中提取内容特征"""
+    async def _extract_contents(self, input_dir):
+        """异步从JSON文件中提取内容特征"""
         contents = []
         
         for filename in os.listdir(input_dir):
             try:
                 if not filename.endswith('.json'):
-                    info_logger.warning(f"Unsupported file type: {filename}")
                     continue
 
                 if filename.startswith("img_results") or filename.startswith("final_results"):
@@ -204,8 +306,7 @@ class FileProcessor:
                 with open(filepath, 'r', encoding='utf-8') as f:
                     data = json.load(f)
                 
-                content = self._process_content(data['result']['markdown'])
-                info_logger.info(f"====filepath:{filepath} content:{content}")
+                content = await self._process_content(data['result']['markdown'])
                 contents.append(content)
             except Exception as e:
                 info_logger.exception(f"====filepath:{filepath} fail!!!")
@@ -216,35 +317,44 @@ class FileProcessor:
 
         return save_path
 
-    def _process_content(self, markdown):
-        """处理Markdown内容"""
+    async def _process_content(self, markdown):
+        """异步处理Markdown内容"""
         sections = [chunk for chunk in markdown.split("\n\n") if chunk.strip()]
         return {
             'prefix': "\n\n".join(sections[:self.CONTENT_SPANS]),
             'postfix': "\n\n".join(sections[-self.CONTENT_SPANS:]),
-            'summary': self._generate_summary(markdown)
+            'summary': await self._generate_summary(markdown)
         }
 
-    def _generate_summary(self, content):
-        """生成内容摘要"""
+    async def _generate_summary(self, content):
+        """异步生成内容摘要"""
         messages = [
             {"role": "system", "content": self.summary_prompt()},
             {"role": "user", "content": f"文档内容:\n{content}"}
         ]
-        return self.ds_vendor.chat(messages, self.model_name)[0]
+        result = await self.ds_vendor.chat(messages, self.model_name)
+        return result[0] if result else ""
 
-    def _classify_documents(self, result_file, file_maps):
-        """文档分类处理"""
-        with open(result_file, 'r', encoding='utf-8') as f:
-            contents = json.load(f)
-        
-        classified = self._llm_classify(contents)
-        info_logger.info(f"文档分类结果: {classified}")
-        
-        return self._format_classification(classified, file_maps)
+    async def _classify_documents(self, result_file, file_maps):
+        """异步文档分类处理"""
+        try:
+            with open(result_file, 'r', encoding='utf-8') as f:
+                contents = json.load(f)
+            
+            if not contents:
+                return []
+                
+            classified = await self._llm_classify(contents)
+            if not classified:
+                return []
+                
+            return self._format_classification(classified, file_maps)
+        except Exception as e:
+            info_logger.error(f"Error in _classify_documents: {str(e)}")
+            return []
 
-    def _llm_classify(self, contents):
-        """调用大模型进行分类"""
+    async def _llm_classify(self, contents):
+        """异步调用大模型进行分类"""
         prompt = "\n\n".join(
             f"<id>{idx}</id>\n<summary>{c['summary']}</summary>"
             f"<prefix>{c['prefix']}</prefix><postfix>{c['postfix']}</postfix>"
@@ -255,7 +365,8 @@ class FileProcessor:
             {"role": "system", "content": self.classification_prompt()},
             {"role": "user", "content": prompt}
         ]
-        return self.ds_vendor.chat(messages, self.model_name)[0]
+        result = await self.ds_vendor.chat(messages, self.model_name)
+        return result[0] if result else ""
 
     def _format_classification(self, raw_output, file_maps):
         """格式化分类结果"""
@@ -272,7 +383,8 @@ class FileProcessor:
                 continue
 
             ## 根据reason创建文件夹
-            reason_dir = os.path.join(self.DEFAULT_SAVE_BASE, reason)
+            unique_id = uuid.uuid4()
+            reason_dir = os.path.join(self.DEFAULT_SAVE_BASE, str(unique_id))
             os.makedirs(reason_dir, exist_ok=True)
                 
             # 获取对应的文件路径
@@ -290,16 +402,7 @@ class FileProcessor:
                     json_files[new_file_path] = file_maps[path]
                     new_file_paths.append(new_file_path)
                     shutil.copyfile(path, new_file_path)
-                    info_logger.info(f"文件已复制: {path} -> {new_file_path}")
-
-
-            # 移动文件到对应的分类目录
-            # for file_path in file_paths:
-            #     file_name = os.path.basename(file_path)
-            #     if os.path.exists(file_path):
-            #         shutil.copyfile(file_path, reason_dir)
-            #         info_logger.info(f"文件已复制到: {file_path} -> {reason_dir}")
-            
+                    info_logger.info(f"文件已复制: {path} -> {new_file_path}")            
             results.append({
                 'doc_files': new_file_paths,
                 'annotation': reason,
@@ -384,13 +487,20 @@ class FileProcessor:
         return cls_guidan_sys_prompt
 
 
-if __name__ == "__main__":
-
+# 修改主函数使用异步工厂方法
+async def main():
     asset_dir = "test_datas/2025030210001"
-    processor = FileProcessor()
-    test_request = {
-        "trace_id": "12345678",
-        "asset_dir": asset_dir
-    }
-    results = processor.process_asset(test_request)
-    print("--finish---")
+    processor = await FileProcessor.create()  # 使用异步工厂方法
+    try:
+        test_request = {
+            "trace_id": "12345678",
+            "asset_dir": asset_dir,
+            "save_dir": ""  # 添加 save_dir 参数
+        }
+        results = await processor.process_asset(test_request)
+        print("--finish---")
+    finally:
+        await processor.close()
+
+if __name__ == "__main__":
+    asyncio.run(main())

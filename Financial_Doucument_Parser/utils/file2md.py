@@ -5,6 +5,10 @@ import json
 import os
 import oss2
 import configparser
+import aiohttp
+import aiofiles
+from utils.logger import info_logger, filter as trace_filter  # 重命名 filter 导入
+
 # 读取配置文件
 config = configparser.ConfigParser()
 config.read('config.ini')
@@ -27,8 +31,90 @@ class TextinOcr(object):
         self._app_id = app_id
         self._app_secret = app_secret
         self.host = 'https://api.textin.com'
+        self.session = None
 
-    def recognize_pdf2md(self, image_path, options=None, is_url=False):
+    async def get_session(self):
+        if self.session is None:
+            self.session = aiohttp.ClientSession()
+        return self.session
+
+    async def close(self):
+        if self.session:
+            await self.session.close()
+            self.session = None
+
+    async def get_file_content_async(self, filepath):
+        async with aiofiles.open(filepath, 'rb') as f:
+            return await f.read()
+
+    async def recognize_pdf2md(self, image_path, options=None, is_url=False):
+        """异步提取文件内容为markdown"""
+        default_options = {
+            'pdf_pwd': '',
+            'dpi': 144,
+            'page_start': 0,
+            'page_count': 1000,
+            'apply_document_tree': 0,
+            'markdown_details': 1,
+            'page_details': 0,
+            'table_flavor': 'md',
+            'get_image': 'none',
+            'parse_mode': 'scan',
+        }
+
+        # 如果提供了选项，更新默认值
+        if options:
+            default_options.update(options)
+
+        url = self.host + '/ai/service/v1/pdf_to_markdown'
+        headers = {
+            'x-ti-app-id': self._app_id,
+            'x-ti-secret-code': self._app_secret
+        }
+
+        try:
+            if is_url:
+                image = image_path
+                headers['Content-Type'] = 'text/plain'
+            else:
+                image = await self.get_file_content_async(image_path)
+                headers['Content-Type'] = 'application/octet-stream'
+
+            session = await self.get_session()
+            
+            # 使用与同步方法相同的请求格式
+            async with session.post(url, 
+                                 data=image,  # 直接发送二进制数据
+                                 headers=headers,
+                                 params=default_options  # 使用 params 参数传递选项
+                                 ) as response:
+                if response.status != 200:
+                    error_text = await response.text()
+                    info_logger.error(f"API request failed with status {response.status}: {error_text}")
+                    raise Exception(f"API request failed: {error_text}")
+                
+                result = await response.json()
+                info_logger.info(f"API response for {image_path}: {result}")
+                
+                # if not result or (isinstance(result, dict) and 'code' in result):
+                #     error_msg = f"API error: {result.get('message', 'Unknown error')}" if isinstance(result, dict) else "Invalid response"
+                #     info_logger.error(error_msg)
+                #     raise Exception(error_msg)
+                
+                info_logger.info(f"Successfully processed file: {image_path}")
+                return result
+
+        except aiohttp.ClientError as e:
+            error_msg = f"Network error while processing {image_path}: {str(e)}"
+            info_logger.error(error_msg)
+            raise Exception(error_msg)
+        except Exception as e:
+            error_msg = f"Error processing {image_path}: {str(e)}"
+            info_logger.error(error_msg)
+            raise
+
+
+    def recognize_pdf2md_sync(self, image_path, options=None, is_url=False):
         """ 提取文件内容为markdown """
 
         options = {
@@ -58,8 +144,6 @@ class TextinOcr(object):
             headers['Content-Type'] = 'application/octet-stream'
         
         return requests.post(url, data=image, headers=headers, params=options)
-
-
 
 
 def parser_file(filepath,savepath):
@@ -128,6 +212,6 @@ if __name__ == "__main__":
     upload_file()
 
     # filepath = "test/2.json"
-    # with open(filepath,'r',encoding='utf-8') as f:
+    # with open(filepath,'r',encoding='utf-8') as f):
     #     datas = json.load(f)
     # print(datas['result']['markdown'])

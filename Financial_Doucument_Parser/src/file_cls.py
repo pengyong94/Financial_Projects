@@ -1,6 +1,6 @@
 import sys,os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.file2md import TextinOcr
+from utils.file2md_bak import TextinOcr
 from tokenizer_helper import compute_encode
 import json
 import re

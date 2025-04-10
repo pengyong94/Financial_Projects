@@ -1435,3 +1435,808 @@ INFO:     15.235.189.157:37361 - "GET / HTTP/1.1" 404 Not Found
 WARNING:  Invalid HTTP request received.
 INFO:     154.198.215.69:33069 - "GET /_stcore/health HTTP/1.1" 404 Not Found
 INFO:     87.236.176.106:51073 - "GET / HTTP/1.1" 404 Not Found
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1020]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:87: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  result = fileprocessor.process_asset(request.dict())
+INFO:     121.199.20.25:57046 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     121.199.20.25:57114 - "POST /extract_document HTTP/1.1" 200 OK
+INFO:     206.168.34.112:50858 - "GET / HTTP/1.1" 404 Not Found
+INFO:     206.168.34.112:50862 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     206.168.34.112:47588 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     101.133.131.45:49448 - "GET / HTTP/1.0" 404 Not Found
+INFO:     101.133.131.45:51696 - "GET /nice%20ports%2C/Trinity.txt.bak HTTP/1.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     101.133.131.45:54294 - "OPTIONS / HTTP/1.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     101.133.131.45:60422 - "POST /sdk HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     101.133.131.45:34778 - "GET /nmaplowercheck1744051673 HTTP/1.1" 404 Not Found
+INFO:     101.133.131.45:34818 - "GET /HNAP1 HTTP/1.1" 404 Not Found
+INFO:     101.133.131.45:34840 - "GET /evox/about HTTP/1.1" 404 Not Found
+INFO:     101.133.131.45:40714 - "GET / HTTP/1.1" 404 Not Found
+INFO:     106.75.164.40:60314 - "POST /token HTTP/1.1" 404 Not Found
+INFO:     198.235.24.248:57618 - "GET / HTTP/1.1" 404 Not Found
+INFO:     20.221.66.214:48668 - "GET /setup/eureka_info HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     91.196.152.88:36867 - "GET / HTTP/1.1" 404 Not Found
+INFO:     91.196.152.120:46815 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1020]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1106]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:211: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  request.dict(),
+INFO:     121.199.20.25:41460 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1106]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1133]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:211: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  request.dict(),
+INFO:     121.199.20.25:51730 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1133]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1149]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:211: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  request.dict(),
+INFO:     121.199.20.25:59488 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1149]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1165]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1165]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1179]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:211: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  request.dict(),
+INFO:     121.199.20.25:44530 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1179]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1225]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:211: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  request.dict(),
+INFO:     121.199.20.25:55424 - "POST /preprocess_asset HTTP/1.1" 200 OK
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:292: RuntimeWarning: coroutine 'FileProcessor._classify_documents' was never awaited
+  await task_manager.set_failed(trace_id, task_type, str(e))
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1225]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1240]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:211: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  request.dict(),
+INFO:     121.199.20.25:42922 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1240]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1255]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:211: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  request.dict(),
+INFO:     121.199.20.25:42004 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1255]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1270]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:211: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  request.dict(),
+INFO:     121.199.20.25:54554 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1270]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1285]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1285]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1303]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:211: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  request.dict(),
+INFO:     121.199.20.25:57780 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     205.210.31.8:61144 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     36.112.213.22:57336 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.145.111:42654 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.145.111:47054 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.145.111:47062 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.145.111:51792 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     36.41.68.148:49306 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.86.71:49774 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.33.123:46740 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.93.105:53594 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.32.22:46086 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.89.22:50944 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.87.212:48844 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.86.82:42662 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.86.67:33772 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.85.179:50068 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.33.98:36140 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.65.107:51552 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.56:52190 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.89.52:35974 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.61:60442 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.65.107:51874 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.33.122:48332 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.87.37:38106 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.33.122:48832 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.94.44:39136 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.86.166:52718 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.33:56334 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.93.105:55226 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.33.101:49986 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.85.254:59850 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.94.44:39898 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.87.37:39262 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.252:55780 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.87.163:45584 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.86.71:55406 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.86.87:45448 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.68.209:56122 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.92.145:52404 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.33.119:33814 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.65.20:56550 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.87.37:41148 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.68.148:53666 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.53:43504 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.66.140:43758 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.33.101:53250 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.57:54618 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.82.0:48600 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.86.249:58480 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.69.156:40272 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.94.44:44672 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.82.0:48766 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.64.177:46150 - "GET / HTTP/1.1" 404 Not Found
+INFO:      - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.83.5:47466 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.64.166:38574 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.83:33312 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.12.197:40610 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     36.41.69.15:49010 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.86.166:56984 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.88.101:50808 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.86.249:59318 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.59:58784 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.71.44:60588 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.86.67:40142 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.88.101:51630 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.15.250:48994 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.86.166:58246 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.64.81:57122 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.12.197:42588 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.93.105:60212 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.41.66.49:43076 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.83.5:49712 - "GET / HTTP/1.1" 404 Not Found
+INFO:     125.122.33.97:53222 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.88.166:50816 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.88.166:51080 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.93.250:45634 - "GET / HTTP/1.1" 404 Not Found
+INFO:     113.141.81.99:40666 - "GET / HTTP/1.1" 404 Not Found
+INFO:     123.245.187.170:52866 - "GET / HTTP/1.1" 404 Not Found
+INFO:     123.245.187.170:47376 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     195.184.76.11:41885 - "GET / HTTP/1.1" 404 Not Found
+INFO:     195.184.76.15:40887 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     137.184.169.162:51274 - "GET /squid-internal-mgr/cachemgr.cgi HTTP/1.1" 404 Not Found
+INFO:     59.82.21.241:1341 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Unsupported upgrade request.
+WARNING:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+INFO:     39.103.162.98:59258 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Unsupported upgrade request.
+WARNING:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+INFO:     106.14.80.184:35814 - "GET / HTTP/1.1" 404 Not Found
+INFO:     223.113.128.180:52580 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     52.81.87.90:34696 - "GET / HTTP/1.1" 404 Not Found
+INFO:     52.81.87.90:34708 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     52.81.87.90:34714 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     52.81.87.90:34710 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1303]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1385]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+WARNING:  Invalid HTTP request received.
+INFO:     123.58.210.106:37702 - "GET / HTTP/1.1" 404 Not Found
+INFO:     123.58.210.106:41030 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     123.58.210.106:41044 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     123.58.210.106:41058 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:211: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  request.dict(),
+INFO:     121.199.20.25:50020 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1385]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+Traceback (most recent call last):
+  File "/data/AI_Projects/Financial_Doucument_Parser/src/main.py", line 14, in <module>
+    from file_process import FileProcessor
+  File "/data/AI_Projects/Financial_Doucument_Parser/src/file_process.py", line 17, in <module>
+    import aioredis
+ModuleNotFoundError: No module named 'aioredis'
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+Traceback (most recent call last):
+  File "/data/AI_Projects/Financial_Doucument_Parser/src/main.py", line 15, in <module>
+    from extract_hepler import ExtractHelper
+  File "/data/AI_Projects/Financial_Doucument_Parser/src/extract_hepler.py", line 8, in <module>
+    from utils.file2md_bak import TextinOcr
+ModuleNotFoundError: No module named 'utils.file2md_bak'
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+/data/AI_Projects/Financial_Doucument_Parser/src/file_process.py:27: RuntimeWarning: coroutine 'FileProcessor._init_redis' was never awaited
+  self._init_redis()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+INFO:     Started server process [1429]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:211: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  request.dict(),
+INFO:     121.199.20.25:38062 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1429]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1444]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:211: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  request.dict(),
+INFO:     121.199.20.25:39644 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1444]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1459]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:211: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  request.dict(),
+INFO:     121.199.20.25:55550 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1459]
+Traceback (most recent call last):
+  File "/data/AI_Projects/Financial_Doucument_Parser/src/main.py", line 14, in <module>
+    from file_process import FileProcessor
+  File "/data/AI_Projects/Financial_Doucument_Parser/src/file_process.py", line 443
+    with open(result_path, 'w', encoding='utf-8') as f):
+                                                      ^
+SyntaxError: unmatched ')'
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1480]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:211: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  request.dict(),
+INFO:     121.199.20.25:57928 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1480]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1507]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:211: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  request.dict(),
+INFO:     121.199.20.25:34684 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1507]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1534]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:211: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  request.dict(),
+INFO:     121.199.20.25:41318 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1534]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1561]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:211: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  request.dict(),
+INFO:     121.199.20.25:53280 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1561]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1588]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:211: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  request.dict(),
+INFO:     121.199.20.25:43450 - "POST /preprocess_asset HTTP/1.1" 200 OK
+Traceback (most recent call last):
+  File "/data/AI_Projects/Financial_Doucument_Parser/src/main.py", line 14, in <module>
+    from file_process import FileProcessor
+  File "/data/AI_Projects/Financial_Doucument_Parser/src/file_process.py", line 12, in <module>
+    from utils.api import DeepSeek_Vendors
+  File "/data/AI_Projects/Financial_Doucument_Parser/utils/__init__.py", line 4, in <module>
+    from utils.api import *
+  File "/data/AI_Projects/Financial_Doucument_Parser/utils/api.py", line 115
+    			return assistant_message
+    			^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: 'return' with value in async generator
+INFO:     Shutting down
+INFO:     Waiting for background tasks to complete. (CTRL+C to force quit)
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1588]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1627]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:211: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  request.dict(),
+INFO:     121.199.20.25:49548 - "POST /preprocess_asset HTTP/1.1" 200 OK
+Traceback (most recent call last):
+  File "/data/AI_Projects/Financial_Doucument_Parser/src/main.py", line 14, in <module>
+    from file_process import FileProcessor
+  File "/data/AI_Projects/Financial_Doucument_Parser/src/file_process.py", line 12, in <module>
+    from utils.api import DeepSeek_Vendors
+  File "/data/AI_Projects/Financial_Doucument_Parser/utils/__init__.py", line 4, in <module>
+    from utils.api import *
+  File "/data/AI_Projects/Financial_Doucument_Parser/utils/api.py", line 119
+    			return assistant_message
+    			^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: 'return' with value in async generator
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1666]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8008): address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1679]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8008): address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Shutting down
+INFO:     Waiting for background tasks to complete. (CTRL+C to force quit)
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1627]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1692]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:211: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  request.dict(),
+INFO:     121.199.20.25:33190 - "POST /preprocess_asset HTTP/1.1" 200 OK
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:211: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  request.dict(),
+INFO:     121.199.20.25:53308 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     121.199.20.25:54800 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     121.199.20.25:54814 - "GET /task_status/preprocess_asset/test_trace_636daf54-1711-4453-a3de-991310304334 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:59538 - "GET /task_status/preprocess_asset/test_trace_636daf54-1711-4453-a3de-991310304334 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:42750 - "GET /task_status/preprocess_asset/test_trace_636daf54-1711-4453-a3de-991310304334 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:45780 - "GET /task_status/preprocess_asset/test_trace_636daf54-1711-4453-a3de-991310304334 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:32800 - "GET /task_status/preprocess_asset/test_trace_636daf54-1711-4453-a3de-991310304334 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:60758 - "GET /task_status/preprocess_asset/test_trace_636daf54-1711-4453-a3de-991310304334 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:37054 - "GET /task_status/preprocess_asset/test_trace_636daf54-1711-4453-a3de-991310304334 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:60800 - "GET /task_status/preprocess_asset/test_trace_636daf54-1711-4453-a3de-991310304334 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:45756 - "GET /task_status/preprocess_asset/test_trace_636daf54-1711-4453-a3de-991310304334 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:46018 - "GET /task_status/preprocess_asset/test_trace_636daf54-1711-4453-a3de-991310304334 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:59524 - "GET /task_status/preprocess_asset/test_trace_636daf54-1711-4453-a3de-991310304334 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:35916 - "GET /task_status/preprocess_asset/test_trace_636daf54-1711-4453-a3de-991310304334 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:60552 - "GET /task_status/preprocess_asset/test_trace_636daf54-1711-4453-a3de-991310304334 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:36678 - "GET /task_status/preprocess_asset/test_trace_636daf54-1711-4453-a3de-991310304334 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:36692 - "POST /extract_document HTTP/1.1" 200 OK
+INFO:     121.199.20.25:36704 - "GET /task_status/extract_document/test_trace_636daf54-1711-4453-a3de-991310304334 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:52370 - "GET /task_status/extract_document/test_trace_636daf54-1711-4453-a3de-991310304334 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:53966 - "GET /task_status/extract_document/test_trace_636daf54-1711-4453-a3de-991310304334 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:33816 - "GET /task_status/extract_document/test_trace_636daf54-1711-4453-a3de-991310304334 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:38454 - "GET /task_status/extract_document/test_trace_636daf54-1711-4453-a3de-991310304334 HTTP/1.1" 200 OK
+INFO:     118.123.1.37:43022 - "GET /stylesheets/theme.css HTTP/1.1" 404 Not Found
+INFO:     118.123.1.37:43018 - "GET /ips/index.php HTTP/1.1" 404 Not Found
+INFO:     118.123.1.37:43020 - "GET /index.php HTTP/1.1" 404 Not Found
+INFO:     118.123.1.37:43024 - "GET /index.php HTTP/1.1" 404 Not Found
+INFO:     118.123.1.37:43028 - "GET /public/stylesheets/theme.css HTTP/1.1" 404 Not Found
+INFO:     118.123.1.37:43030 - "GET /chs/js/lang_zh_tw.js HTTP/1.1" 404 Not Found
+INFO:     118.123.1.37:43032 - "GET /customer/js/lang_zh_tw.js HTTP/1.1" 404 Not Found
+INFO:     118.123.1.37:43034 - "GET / HTTP/1.1" 404 Not Found
+INFO:     118.123.1.37:43036 - "GET /login/stylesheets/theme.css HTTP/1.1" 404 Not Found
+INFO:     106.75.186.101:46962 - "POST /token HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     47.236.251.77:48114 - "GET http%3A//passport.baidu.com/ HTTP/1.1" 404 Not Found
+INFO:     147.185.132.103:65290 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     198.235.24.129:58728 - "GET / HTTP/1.1" 404 Not Found
+INFO:     20.169.104.237:34314 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     113.215.189.251:56350 - "GET / HTTP/1.1" 404 Not Found
+INFO:     59.82.21.83:11448 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     139.224.42.89:60114 - "GET / HTTP/1.1" 404 Not Found
+INFO:     139.224.42.89:60114 - "GET /explicit_not_exist_path HTTP/1.1" 404 Not Found
+INFO:     139.224.42.89:60114 - "GET /admin/ HTTP/1.1" 404 Not Found
+INFO:     139.224.42.89:60114 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     139.224.42.89:60114 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     139.224.42.89:60114 - "GET /images/ofbiz.ico HTTP/1.1" 404 Not Found
+INFO:     139.224.42.89:60114 - "GET /sse HTTP/1.1" 404 Not Found
+INFO:     139.224.42.89:60114 - "GET /messages HTTP/1.1" 404 Not Found
+INFO:     139.224.42.89:60114 - "GET /phpMyAdmin/ HTTP/1.1" 404 Not Found
+INFO:     139.224.42.89:60114 - "GET /phpmyadmin/ HTTP/1.1" 404 Not Found
+INFO:     139.224.42.89:60114 - "GET /wcm/ HTTP/1.1" 404 Not Found
+INFO:     139.196.217.1:53754 - "GET / HTTP/1.1" 404 Not Found
+INFO:     139.196.217.1:53756 - "GET / HTTP/1.1" 404 Not Found
+INFO:     115.231.78.7:50385 - "GET / HTTP/1.1" 404 Not Found
+INFO:     115.231.78.7:8478 - "GET / HTTP/1.1" 404 Not Found
+INFO:     115.231.78.7:56764 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     115.231.78.7:45540 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1692]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1816]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:211: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  request.dict(),
+Redis连接成功，服务正常响应 PONG
+Redis连接成功，服务正常响应 PONG
+INFO:     121.199.20.25:51848 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     121.199.20.25:51860 - "GET /task_status/preprocess_asset/test_trace_4f8a1c83-9701-44e3-a325-41183da18c47 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:58734 - "GET /task_status/preprocess_asset/test_trace_4f8a1c83-9701-44e3-a325-41183da18c47 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:55522 - "GET /task_status/preprocess_asset/test_trace_4f8a1c83-9701-44e3-a325-41183da18c47 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:59956 - "GET /task_status/preprocess_asset/test_trace_4f8a1c83-9701-44e3-a325-41183da18c47 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:54432 - "GET /task_status/preprocess_asset/test_trace_4f8a1c83-9701-44e3-a325-41183da18c47 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:41454 - "GET /task_status/preprocess_asset/test_trace_4f8a1c83-9701-44e3-a325-41183da18c47 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:40220 - "GET /task_status/preprocess_asset/test_trace_4f8a1c83-9701-44e3-a325-41183da18c47 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:53850 - "GET /task_status/preprocess_asset/test_trace_4f8a1c83-9701-44e3-a325-41183da18c47 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:49030 - "GET /task_status/preprocess_asset/test_trace_4f8a1c83-9701-44e3-a325-41183da18c47 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:38674 - "GET /task_status/preprocess_asset/test_trace_4f8a1c83-9701-44e3-a325-41183da18c47 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:35358 - "GET /task_status/preprocess_asset/test_trace_4f8a1c83-9701-44e3-a325-41183da18c47 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:42416 - "GET /task_status/preprocess_asset/test_trace_4f8a1c83-9701-44e3-a325-41183da18c47 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:54544 - "GET /task_status/preprocess_asset/test_trace_4f8a1c83-9701-44e3-a325-41183da18c47 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:32916 - "GET /task_status/preprocess_asset/test_trace_4f8a1c83-9701-44e3-a325-41183da18c47 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:54772 - "GET /task_status/preprocess_asset/test_trace_4f8a1c83-9701-44e3-a325-41183da18c47 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:43734 - "GET /task_status/preprocess_asset/test_trace_4f8a1c83-9701-44e3-a325-41183da18c47 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:35730 - "GET /task_status/preprocess_asset/test_trace_4f8a1c83-9701-44e3-a325-41183da18c47 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:59524 - "GET /task_status/preprocess_asset/test_trace_4f8a1c83-9701-44e3-a325-41183da18c47 HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1816]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1846]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1846]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1860]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+INFO:     121.199.20.25:48066 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     121.199.20.25:48076 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     121.199.20.25:55058 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1860]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1877]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+Traceback (most recent call last):
+  File "/data/AI_Projects/Financial_Doucument_Parser/utils/redis_util.py", line 29, in redis_connection
+    info_logger.info("Redis连接成功，服务正常响应 PONG")
+NameError: name 'info_logger' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/AI_Projects/Financial_Doucument_Parser/src/main.py", line 20, in <module>
+    redis_conn = redis_connection()
+  File "/data/AI_Projects/Financial_Doucument_Parser/utils/redis_util.py", line 39, in redis_connection
+    info_logger.error(f"未知错误：{str(e)}")
+NameError: name 'info_logger' is not defined
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1910]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8008): address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1925]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8008): address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [1941]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:219: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  request.dict(),
+INFO:     121.199.20.25:52650 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     121.199.20.25:52656 - "GET /task_status/preprocess_asset/test_trace_a5d6f400-772b-4826-a025-b701c9d55de4 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:35594 - "GET /task_status/preprocess_asset/test_trace_a5d6f400-772b-4826-a025-b701c9d55de4 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:42206 - "GET /task_status/preprocess_asset/test_trace_a5d6f400-772b-4826-a025-b701c9d55de4 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:45190 - "GET /task_status/preprocess_asset/test_trace_a5d6f400-772b-4826-a025-b701c9d55de4 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:48200 - "GET /task_status/preprocess_asset/test_trace_a5d6f400-772b-4826-a025-b701c9d55de4 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:54962 - "GET /task_status/preprocess_asset/test_trace_a5d6f400-772b-4826-a025-b701c9d55de4 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:41942 - "GET /task_status/preprocess_asset/test_trace_a5d6f400-772b-4826-a025-b701c9d55de4 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:34734 - "GET /task_status/preprocess_asset/test_trace_a5d6f400-772b-4826-a025-b701c9d55de4 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:57850 - "GET /task_status/preprocess_asset/test_trace_a5d6f400-772b-4826-a025-b701c9d55de4 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:47798 - "GET /task_status/preprocess_asset/test_trace_a5d6f400-772b-4826-a025-b701c9d55de4 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:50022 - "GET /task_status/preprocess_asset/test_trace_a5d6f400-772b-4826-a025-b701c9d55de4 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:38660 - "GET /task_status/preprocess_asset/test_trace_a5d6f400-772b-4826-a025-b701c9d55de4 HTTP/1.1" 200 OK
+INFO:     167.94.138.120:47316 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.120:47340 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.138.120:43412 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     101.133.226.32:56886 - "GET / HTTP/1.0" 404 Not Found
+INFO:     101.133.226.32:59820 - "GET /nice%20ports%2C/Trinity.txt.bak HTTP/1.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     101.133.226.32:37730 - "OPTIONS / HTTP/1.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     101.133.226.32:50088 - "GET /nmaplowercheck1744229359 HTTP/1.1" 404 Not Found
+INFO:     101.133.226.32:50168 - "GET /HNAP1 HTTP/1.1" 404 Not Found
+INFO:     101.133.226.32:51758 - "POST /sdk HTTP/1.1" 404 Not Found
+INFO:     101.133.226.32:52330 - "GET /evox/about HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     101.133.226.32:34732 - "GET / HTTP/1.1" 404 Not Found
+INFO:     3.137.162.81:56078 - "GET / HTTP/1.1" 404 Not Found
+INFO:     118.123.1.36:52478 - "GET /index.php HTTP/1.1" 404 Not Found
+INFO:     118.123.1.36:52482 - "GET / HTTP/1.1" 404 Not Found
+INFO:     118.123.1.36:52486 - "GET /stylesheets/theme.css HTTP/1.1" 404 Not Found
+INFO:     118.123.1.36:52488 - "GET /chs/js/lang_zh_tw.js HTTP/1.1" 404 Not Found
+INFO:     118.123.1.36:52492 - "GET /customer/js/lang_zh_tw.js HTTP/1.1" 404 Not Found
+INFO:     118.123.1.36:52500 - "GET /index.php HTTP/1.1" 404 Not Found
+INFO:     118.123.1.36:52506 - "GET /public/stylesheets/theme.css HTTP/1.1" 404 Not Found
+INFO:     118.123.1.36:52502 - "GET /ips/index.php HTTP/1.1" 404 Not Found
+INFO:     118.123.1.36:52504 - "GET /login/stylesheets/theme.css HTTP/1.1" 404 Not Found
+INFO:     47.236.251.77:34078 - "GET http%3A//passport.baidu.com/ HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     18.219.16.20:37402 - "GET / HTTP/1.1" 404 Not Found
+INFO:     18.219.16.20:45700 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     194.187.176.49:40746 - "GET / HTTP/1.1" 404 Not Found
+INFO:     194.187.176.57:40754 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     198.235.24.147:57942 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     185.247.137.217:35199 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.47:64590 - "GET / HTTP/1.1" 404 Not Found
+INFO:     115.236.119.144:3814 - "POST /preprocess_asset?asset_dir=/data/test_data/2025030210001&save_dir=/data/test_data/2025030210001/docs HTTP/1.1" 422 Unprocessable Entity
+INFO:     115.236.119.144:7224 - "POST /preprocess_asset?asset_dir=/data/test_data/2025030210001&save_dir=/data/test_data/2025030210001/docs&client=inner&trace_id=1a2a2423423 HTTP/1.1" 422 Unprocessable Entity
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:219: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  request.dict(),
+INFO:     115.236.119.144:6309 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     115.236.119.144:6175 - "GET /task_status/preprocess_asset/1a2a2423423 HTTP/1.1" 200 OK
+INFO:     115.236.119.144:6175 - "GET /task_status/preprocess_asset/1a2a2423423 HTTP/1.1" 200 OK
+INFO:     115.236.119.144:2499 - "GET /task_status/preprocess_asset/1a2a2423423 HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.146.49:44952 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.146.49:39902 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.146.49:39918 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.146.49:50894 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1941]
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+INFO:     Started server process [2074]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8008 (Press CTRL+C to quit)
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:219: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  request.dict(),
+INFO:     121.199.20.25:43816 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     121.199.20.25:43824 - "GET /task_status/preprocess_asset/test_trace_cd8ffe1d-2078-4b26-8f9b-bee1aed7b970 HTTP/1.1" 200 OK
+/data/AI_Projects/Financial_Doucument_Parser/src/main.py:219: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  request.dict(),
+INFO:     115.236.119.144:6235 - "POST /preprocess_asset HTTP/1.1" 200 OK
+INFO:     121.199.20.25:50672 - "GET /task_status/preprocess_asset/test_trace_cd8ffe1d-2078-4b26-8f9b-bee1aed7b970 HTTP/1.1" 200 OK
+INFO:     115.236.119.144:5044 - "GET /task_status/preprocess_asset/12291744293665978 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:60842 - "GET /task_status/preprocess_asset/test_trace_cd8ffe1d-2078-4b26-8f9b-bee1aed7b970 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:47068 - "GET /task_status/preprocess_asset/test_trace_cd8ffe1d-2078-4b26-8f9b-bee1aed7b970 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:59508 - "GET /task_status/preprocess_asset/test_trace_cd8ffe1d-2078-4b26-8f9b-bee1aed7b970 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:37404 - "GET /task_status/preprocess_asset/test_trace_cd8ffe1d-2078-4b26-8f9b-bee1aed7b970 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:44496 - "GET /task_status/preprocess_asset/test_trace_cd8ffe1d-2078-4b26-8f9b-bee1aed7b970 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:54818 - "GET /task_status/preprocess_asset/test_trace_cd8ffe1d-2078-4b26-8f9b-bee1aed7b970 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:48106 - "GET /task_status/preprocess_asset/test_trace_cd8ffe1d-2078-4b26-8f9b-bee1aed7b970 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:47532 - "GET /task_status/preprocess_asset/test_trace_cd8ffe1d-2078-4b26-8f9b-bee1aed7b970 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:38672 - "GET /task_status/preprocess_asset/test_trace_cd8ffe1d-2078-4b26-8f9b-bee1aed7b970 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:43780 - "GET /task_status/preprocess_asset/test_trace_cd8ffe1d-2078-4b26-8f9b-bee1aed7b970 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:50534 - "GET /task_status/preprocess_asset/test_trace_cd8ffe1d-2078-4b26-8f9b-bee1aed7b970 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:51426 - "GET /task_status/preprocess_asset/test_trace_cd8ffe1d-2078-4b26-8f9b-bee1aed7b970 HTTP/1.1" 200 OK
+INFO:     121.199.20.25:34664 - "GET /task_status/preprocess_asset/test_trace_cd8ffe1d-2078-4b26-8f9b-bee1aed7b970 HTTP/1.1" 200 OK
